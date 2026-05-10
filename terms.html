@@ -110,6 +110,11 @@
     }
     .cta-header:hover{transform:translateY(-1px);box-shadow:0 14px 32px -10px rgba(90,169,255,.7)}
     .cta-header .material-symbols-outlined{font-size:18px}
+    .lang-switch{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;letter-spacing:.06em;flex:none}
+    .lang-switch a{color:#9aa3bf;transition:color .2s ease}
+    .lang-switch a:hover{color:#fff}
+    .lang-switch .lang-active{color:#fff}
+    .lang-switch .lang-sep{color:#9aa3bf;font-weight:400}
 
     @media (max-width:768px){
       .nav{display:none}
@@ -247,6 +252,11 @@
         <a href="/#screens">Captures</a>
         <a href="/#ads">Annonceurs</a>
       </nav>
+      <div class="lang-switch" aria-label="Langue">
+        <span class="lang-active">FR</span>
+        <span class="lang-sep">·</span>
+        <a href="terms-en.html">EN</a>
+      </div>
       <a class="cta-header" href="/#download">
         <span class="material-symbols-outlined">download</span>
         Télécharger

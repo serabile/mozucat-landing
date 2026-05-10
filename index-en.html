@@ -1,29 +1,29 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#040712" />
 
-  <title>Mozucat — L'expérience IPTV, soignée.</title>
-  <meta name="description" content="Client IPTV premium pour iPhone, Android et TV. Lecture fluide, présentation soignée, navigation sans friction pour votre abonnement IPTV." />
-  <link rel="canonical" href="https://mozucat.com" />
+  <title>Mozucat — The IPTV experience, refined.</title>
+  <meta name="description" content="Premium IPTV client for iPhone, Android and TV. Smooth playback, refined presentation, friction-free navigation for your IPTV subscription." />
+  <link rel="canonical" href="https://mozucat.com/en" />
   <link rel="icon" type="image/png" href="assets/mozucat-cat.png" />
   <link rel="apple-touch-icon" href="assets/mozucat-cat.png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mozucat.com" />
-  <meta property="og:title" content="Mozucat — L'expérience IPTV, soignée." />
-  <meta property="og:description" content="Client IPTV premium pour iPhone, Android et TV. Lecture fluide, présentation soignée, navigation sans friction pour votre abonnement IPTV." />
-  <meta property="og:image" content="https://mozucat.com/screenshots/01-home-iphone.png" />
-  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://mozucat.com/en" />
+  <meta property="og:title" content="Mozucat — The IPTV experience, refined." />
+  <meta property="og:description" content="Premium IPTV client for iPhone, Android and TV. Smooth playback, refined presentation, friction-free navigation for your IPTV subscription." />
+  <meta property="og:image" content="https://mozucat.com/screenshots-en/01-home-iphone-en.png" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mozucat — L'expérience IPTV, soignée." />
-  <meta name="twitter:description" content="Client IPTV premium pour iPhone, Android et TV. Lecture fluide, présentation soignée, navigation sans friction pour votre abonnement IPTV." />
-  <meta name="twitter:image" content="https://mozucat.com/screenshots/01-home-iphone.png" />
+  <meta name="twitter:title" content="Mozucat — The IPTV experience, refined." />
+  <meta name="twitter:description" content="Premium IPTV client for iPhone, Android and TV. Smooth playback, refined presentation, friction-free navigation for your IPTV subscription." />
+  <meta name="twitter:image" content="https://mozucat.com/screenshots-en/01-home-iphone-en.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -138,6 +138,16 @@
     }
     .cta-header:hover{transform:translateY(-1px);box-shadow:0 14px 32px -10px rgba(90,169,255,.7)}
     .cta-header .material-symbols-outlined{font-size:18px}
+
+    /* Language switcher */
+    .lang-switch{
+      display:flex;align-items:center;gap:5px;
+      font-size:13px;font-weight:700;letter-spacing:.06em;flex:none;
+    }
+    .lang-switch a{color:#9aa3bf;transition:color .2s ease}
+    .lang-switch a:hover{color:#fff}
+    .lang-switch .lang-active{color:#fff}
+    .lang-switch .lang-sep{color:#9aa3bf;font-weight:400}
 
     @media (max-width: 768px){
       .nav{display:none}
@@ -255,7 +265,6 @@
     }
     .phone-frame .screen img{width:100%;height:100%;object-fit:cover}
 
-    /* hero glow under phone */
     .hero-visual::after{
       content:"";position:absolute;
       width:380px;height:380px;border-radius:50%;
@@ -479,13 +488,6 @@
     /* ============================================================
        FADE-IN ANIMATION
        ============================================================ */
-    /* Language switcher */
-    .lang-switch{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;letter-spacing:.06em;flex:none}
-    .lang-switch a{color:#9aa3bf;transition:color .2s ease}
-    .lang-switch a:hover{color:#fff}
-    .lang-switch .lang-active{color:#fff}
-    .lang-switch .lang-sep{color:#9aa3bf;font-weight:400}
-
     @media (prefers-reduced-motion: no-preference){
       .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease, transform .7s ease}
       .reveal.in{opacity:1;transform:translateY(0)}
@@ -497,24 +499,24 @@
   <!-- ============================ HEADER ============================ -->
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#top" aria-label="Mozucat — accueil">
+      <a class="brand" href="#top" aria-label="Mozucat — home">
         <img src="assets/mozucat-cat.png" alt="" />
         <span class="word">Mozucat</span>
       </a>
-      <nav class="nav" aria-label="Navigation principale">
-        <a href="#features">Fonctionnalités</a>
-        <a href="#how">Comment ça marche</a>
-        <a href="#screens">Captures</a>
-        <a href="#ads">Annonceurs</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#screens">Screenshots</a>
+        <a href="#ads">Advertisers</a>
       </nav>
-      <div class="lang-switch" aria-label="Langue">
-        <span class="lang-active">FR</span>
+      <div class="lang-switch" aria-label="Language">
+        <a href="index.html">FR</a>
         <span class="lang-sep">·</span>
-        <a href="index-en.html">EN</a>
+        <span class="lang-active">EN</span>
       </div>
       <a class="cta-header" href="#download">
         <span class="material-symbols-outlined">download</span>
-        Télécharger
+        Download
       </a>
     </div>
   </header>
@@ -532,24 +534,24 @@
             <img src="assets/mozucat-cat.png" alt="Mozucat" />
             <span class="word">Mozucat</span>
           </div>
-          <h1>L'expérience IPTV, <em>soignée.</em></h1>
+          <h1>The IPTV experience, <em>refined.</em></h1>
           <p class="hero-sub">
-            Lecture fluide, présentation premium, navigation sans friction. Votre abonnement IPTV, mis en valeur.
+            Smooth playback, premium presentation, friction-free navigation. Your IPTV subscription, elevated.
           </p>
           <div class="store-row">
             <!-- TODO: App Store URL -->
-            <a class="badge" href="#" aria-label="Télécharger sur l'App Store">
+            <a class="badge" href="#" aria-label="Download on the App Store">
               <span class="material-symbols-outlined">apple</span>
               <span class="txt">
-                <span class="top">Disponible sur</span>
+                <span class="top">Download on the</span>
                 <span class="bot">App Store</span>
               </span>
             </a>
             <!-- TODO: Google Play URL -->
-            <a class="badge" href="#" aria-label="Télécharger sur Google Play">
+            <a class="badge" href="#" aria-label="Get it on Google Play">
               <span class="material-symbols-outlined">android</span>
               <span class="txt">
-                <span class="top">Disponible sur</span>
+                <span class="top">Get it on</span>
                 <span class="bot">Google Play</span>
               </span>
             </a>
@@ -559,7 +561,7 @@
         <div class="hero-visual" aria-hidden="true">
           <div class="phone-frame">
             <div class="screen">
-              <img src="screenshots/01-home-iphone.png" alt="" loading="eager" />
+              <img src="screenshots-en/01-home-iphone-en.png" alt="" loading="eager" />
             </div>
           </div>
         </div>
@@ -570,31 +572,31 @@
     <section id="how">
       <div class="container">
         <div class="section-head reveal">
-          <div class="eyebrow"><span class="dot"></span>Comment ça marche</div>
-          <h2>Trois étapes, pas une de plus.</h2>
-          <p>Mozucat se branche sur votre abonnement IPTV existant et le met en valeur.</p>
+          <div class="eyebrow"><span class="dot"></span>How it works</div>
+          <h2>Three steps, that's it.</h2>
+          <p>Mozucat plugs into your existing IPTV subscription and elevates it.</p>
         </div>
 
         <div class="steps">
           <div class="step reveal">
             <div class="step-num">1</div>
-            <h3>Téléchargez Mozucat</h3>
-            <p>Sur l'App Store ou Google Play. Installation immédiate, aucune configuration cachée.</p>
+            <h3>Download Mozucat</h3>
+            <p>From the App Store or Google Play. Instant setup, no hidden configuration.</p>
           </div>
           <div class="step reveal">
             <div class="step-num">2</div>
-            <h3>Connectez votre abonnement IPTV</h3>
-            <p>Saisissez votre playlist M3U ou identifiants Xtream Codes. Mozucat se charge du reste : tri, métadonnées, EPG.</p>
+            <h3>Connect your IPTV subscription</h3>
+            <p>Enter your M3U playlist or Xtream Codes credentials. Mozucat handles the rest: sorting, metadata, EPG.</p>
           </div>
           <div class="step reveal">
             <div class="step-num">3</div>
-            <h3>Profitez d'une expérience soignée</h3>
-            <p>Live TV, films, séries — tout y est, présenté avec soin, lu sans friction.</p>
+            <h3>Enjoy a refined experience</h3>
+            <p>Live TV, movies, series — it's all there, beautifully presented, played without friction.</p>
           </div>
         </div>
 
         <p class="disclaimer reveal">
-          Mozucat est un client IPTV. Vous apportez votre propre abonnement (M3U / Xtream). L'application ne fournit aucun contenu.
+          Mozucat is an IPTV client. You bring your own subscription (M3U / Xtream). The app provides no content.
         </p>
       </div>
     </section>
@@ -603,41 +605,41 @@
     <section id="features">
       <div class="container">
         <div class="section-head reveal">
-          <div class="eyebrow"><span class="dot"></span>Fonctionnalités</div>
-          <h2>Tout ce qu'un client IPTV <em class="accent">devrait</em> faire.</h2>
-          <p>Une app pensée pour mettre VOS chaînes, VOS films et VOS séries en valeur.</p>
+          <div class="eyebrow"><span class="dot"></span>Features</div>
+          <h2>Everything an IPTV client <em class="accent">should</em> do.</h2>
+          <p>An app designed to put YOUR channels, YOUR movies and YOUR series in the spotlight.</p>
         </div>
 
         <div class="features-grid">
           <div class="feature reveal">
             <div class="feature-icon ic-live"><span class="material-symbols-outlined">live_tv</span></div>
             <h3>Live TV</h3>
-            <p>Grille EPG, programme en cours, favoris et accès rapide à vos chaînes préférées.</p>
+            <p>EPG grid, current program, favorites and quick access to your preferred channels.</p>
           </div>
           <div class="feature reveal">
             <div class="feature-icon ic-vod"><span class="material-symbols-outlined">movie</span></div>
-            <h3>Films & Séries</h3>
-            <p>Affiches HD, notes, synopsis, tri par genre — vos contenus VOD enfin présentés avec soin.</p>
+            <h3>Movies & Series</h3>
+            <p>HD posters, ratings, synopses, genre sorting — your VOD content finally presented with care.</p>
           </div>
           <div class="feature reveal">
             <div class="feature-icon ic-player"><span class="material-symbols-outlined">play_circle</span></div>
-            <h3>Lecture fluide</h3>
-            <p>Player natif, streaming adaptatif, lecture sans interruption sur tous vos flux.</p>
+            <h3>Smooth playback</h3>
+            <p>Native player, adaptive streaming, uninterrupted playback on all your streams.</p>
           </div>
           <div class="feature reveal">
             <div class="feature-icon ic-subs"><span class="material-symbols-outlined">subtitles</span></div>
-            <h3>Sous-titres multi-pistes</h3>
-            <p>Plusieurs langues, plusieurs pistes audio — choisissez ce qui vous convient.</p>
+            <h3>Multi-track subtitles</h3>
+            <p>Multiple languages, multiple audio tracks — choose what works for you.</p>
           </div>
           <div class="feature reveal">
             <div class="feature-icon ic-cast"><span class="material-symbols-outlined">cast</span></div>
             <h3>Chromecast</h3>
-            <p>Diffusion vers votre TV en un tap. Reprise instantanée depuis votre téléphone.</p>
+            <p>Cast to your TV in one tap. Instant resume from your phone.</p>
           </div>
           <div class="feature reveal">
             <div class="feature-icon ic-devices"><span class="material-symbols-outlined">devices</span></div>
-            <h3>Multi-plateformes</h3>
-            <p>iPhone, iPad, Android, Android TV — votre IPTV, partout, avec la même expérience.</p>
+            <h3>Multi-platform</h3>
+            <p>iPhone, iPad, Android, Android TV — your IPTV, everywhere, same great experience.</p>
           </div>
         </div>
       </div>
@@ -647,19 +649,19 @@
     <section id="screens">
       <div class="container">
         <div class="section-head reveal">
-          <div class="eyebrow"><span class="dot"></span>Captures d'écran</div>
-          <h2>Faite pour être <em class="accent">regardée.</em></h2>
-          <p>Glissez pour découvrir chaque écran de l'application.</p>
+          <div class="eyebrow"><span class="dot"></span>Screenshots</div>
+          <h2>Built to be <em class="accent">watched.</em></h2>
+          <p>Swipe to explore every screen of the app.</p>
         </div>
       </div>
 
       <div class="gallery-wrap">
         <div class="gallery">
-          <div class="phone-frame"><div class="screen"><img src="screenshots/01-home-iphone.png" alt="Écran d'accueil Mozucat" loading="lazy" /></div></div>
-          <div class="phone-frame"><div class="screen"><img src="screenshots/02-live-iphone.png" alt="Live TV Mozucat" loading="lazy" /></div></div>
-          <div class="phone-frame"><div class="screen"><img src="screenshots/03-films-iphone.png" alt="Films Mozucat" loading="lazy" /></div></div>
-          <div class="phone-frame"><div class="screen"><img src="screenshots/04-series-iphone.png" alt="Séries Mozucat" loading="lazy" /></div></div>
-          <div class="phone-frame"><div class="screen"><img src="screenshots/05-player-iphone.png" alt="Player Mozucat" loading="lazy" /></div></div>
+          <div class="phone-frame"><div class="screen"><img src="screenshots-en/01-home-iphone-en.png" alt="Mozucat home screen" loading="lazy" /></div></div>
+          <div class="phone-frame"><div class="screen"><img src="screenshots-en/02-live-iphone-en.png" alt="Mozucat Live TV" loading="lazy" /></div></div>
+          <div class="phone-frame"><div class="screen"><img src="screenshots-en/03-films-iphone-en.png" alt="Mozucat Movies" loading="lazy" /></div></div>
+          <div class="phone-frame"><div class="screen"><img src="screenshots-en/04-series-iphone-en.png" alt="Mozucat Series" loading="lazy" /></div></div>
+          <div class="phone-frame"><div class="screen"><img src="screenshots-en/05-player-iphone-en.png" alt="Mozucat Player" loading="lazy" /></div></div>
         </div>
       </div>
     </section>
@@ -668,34 +670,34 @@
     <section class="ads-section" id="ads">
       <div class="container">
         <div class="section-head reveal">
-          <div class="eyebrow"><span class="dot"></span>Espace publicitaire</div>
-          <h2>Annonceurs : votre marque <em class="accent">dans Mozucat.</em></h2>
-          <p>Audience qualifiée d'utilisateurs IPTV cherchant une expérience premium. Espaces publicitaires natifs disponibles : bannières contextuelles, sponsoring de catégories, pre-roll.</p>
+          <div class="eyebrow"><span class="dot"></span>Advertising</div>
+          <h2>Advertisers: your brand <em class="accent">inside Mozucat.</em></h2>
+          <p>Qualified audience of IPTV users seeking a premium experience. Native ad spaces available: contextual banners, category sponsorship, pre-roll.</p>
         </div>
 
         <div class="ads-grid">
           <div class="ads-card reveal">
             <div class="ads-icon"><span class="material-symbols-outlined">campaign</span></div>
-            <h3>Bannière home</h3>
-            <p>Emplacement premium en haut d'écran d'accueil. Visibilité maximale dès l'ouverture de l'app.</p>
+            <h3>Home banner</h3>
+            <p>Premium placement at the top of the home screen. Maximum visibility the moment the app opens.</p>
           </div>
           <div class="ads-card reveal">
             <div class="ads-icon"><span class="material-symbols-outlined">category</span></div>
-            <h3>Sponsoring de section</h3>
-            <p>Associez votre marque à une catégorie (Live, Films, Séries). Intégration native, non-intrusive.</p>
+            <h3>Section sponsorship</h3>
+            <p>Associate your brand with a category (Live, Movies, Series). Native, non-intrusive integration.</p>
           </div>
           <div class="ads-card reveal">
             <div class="ads-icon"><span class="material-symbols-outlined">smart_display</span></div>
             <h3>Video pre-roll</h3>
-            <p>Spot vidéo avant lancement de lecture. Format court, ciblable par catégorie de contenu.</p>
+            <p>Video spot before playback starts. Short format, targetable by content category.</p>
           </div>
         </div>
 
         <div class="ads-cta reveal">
-          <p>Discutons des formats et tarifs adaptés à votre objectif.</p>
-          <a class="btn-primary" href="mailto:support@mozucat.com">
+          <p>Let's talk about formats and rates tailored to your goal.</p>
+          <a class="btn-primary" href="mailto:ads@mozucat.com">
             <span class="material-symbols-outlined">mail</span>
-            Nous contacter
+            Contact us
           </a>
         </div>
       </div>
@@ -712,7 +714,7 @@
             <img src="assets/mozucat-cat.png" alt="" />
             <span class="word">Mozucat</span>
           </a>
-          <p class="footer-tag">L'expérience IPTV, soignée.</p>
+          <p class="footer-tag">The IPTV experience, refined.</p>
         </div>
         <div class="footer-col">
           <h4>App</h4>
@@ -724,10 +726,10 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Légal</h4>
+          <h4>Legal</h4>
           <ul>
-            <li><a href="terms.html">Mentions légales</a></li>
-            <li><a href="privacy-policy.html">Confidentialité</a></li>
+            <li><a href="terms-en.html">Legal Notice</a></li>
+            <li><a href="privacy-policy-en.html">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -738,13 +740,12 @@
         </div>
       </div>
       <div class="footer-bottom">
-        &copy; 2026 Mozucat. Tous droits réservés.
+        &copy; 2026 Mozucat. All rights reserved.
       </div>
     </div>
   </footer>
 
   <script>
-    // Lightweight reveal-on-scroll using IntersectionObserver.
     (function(){
       if (!('IntersectionObserver' in window)) {
         document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
