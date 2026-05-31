@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#040712" />
+
+  <title>Datenschutzrichtlinie — Mozucat</title>
+  <meta name="description" content="Datenschutzrichtlinie von Mozucat, der Premium-IPTV-App für iPhone, Android und TV." />
+  <link rel="canonical" href="https://mozucat.com/privacy-policy-de" />
+  <link rel="icon" type="image/png" href="assets/mozucat-cat.png" />
+  <link rel="apple-touch-icon" href="assets/mozucat-cat.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & ROOT
+       ============================================================ */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+    html{scroll-behavior:smooth}
+    html,body{
+      background:#040712;color:#fff;
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+      min-height:100vh;overflow-x:hidden;
+      -webkit-text-size-adjust:100%;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+    .material-symbols-outlined{
+      font-family:"Material Symbols Outlined";
+      font-weight:normal;font-style:normal;line-height:1;
+      letter-spacing:normal;text-transform:none;display:inline-block;
+      white-space:nowrap;word-wrap:normal;direction:ltr;
+      -webkit-font-feature-settings:"liga";font-feature-settings:"liga";
+      -webkit-font-smoothing:antialiased;
+      font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 24;
+    }
+
+    /* ============================================================
+       GLOBAL BACKGROUND
+       ============================================================ */
+    body{
+      background:
+        radial-gradient(900px 700px at 50% -100px, rgba(90,169,255,.22), transparent 60%),
+        radial-gradient(800px 800px at 85% 35%, rgba(255,48,87,.10), transparent 65%),
+        radial-gradient(700px 700px at 10% 55%, rgba(95,226,191,.10), transparent 65%),
+        linear-gradient(180deg,#0c1736 0%,#070a1a 38%,#040712 100%);
+      background-attachment:fixed;
+    }
+    body::before{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+      background-size:60px 60px;
+      mask-image:radial-gradient(60% 50% at 50% 30%,#000 40%,transparent 80%);
+      -webkit-mask-image:radial-gradient(60% 50% at 50% 30%,#000 40%,transparent 80%);
+    }
+    body::after{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+      background:
+        radial-gradient(2px 2px at 14% 18%, rgba(255,255,255,.5), transparent 60%),
+        radial-gradient(2px 2px at 78% 12%, rgba(255,255,255,.6), transparent 60%),
+        radial-gradient(2px 2px at 22% 82%, rgba(255,255,255,.5), transparent 60%),
+        radial-gradient(2px 2px at 88% 64%, rgba(255,255,255,.55), transparent 60%),
+        radial-gradient(2px 2px at 50% 92%, rgba(255,255,255,.4), transparent 60%);
+    }
+    main, header, footer{position:relative;z-index:1}
+
+    /* ============================================================
+       UTILITIES
+       ============================================================ */
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+
+    /* ============================================================
+       HEADER
+       ============================================================ */
+    .site-header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      background:rgba(7,10,26,.65);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .header-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 24px;max-width:1200px;margin:0 auto;gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;flex:none}
+    .brand img{height:32px;width:auto;filter:drop-shadow(0 4px 12px rgba(90,169,255,.4))}
+    .brand .word{
+      font-size:22px;font-weight:900;letter-spacing:-.03em;
+      background:linear-gradient(180deg,#fff 0%,#b9c8ff 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .nav{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:14px;font-weight:500;color:#b6c0db;transition:color .2s ease}
+    .nav a:hover{color:#fff}
+    .cta-header{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:9px 16px;border-radius:999px;
+      background:linear-gradient(135deg,#5aa9ff 0%,#5fe2bf 100%);
+      color:#040712;font-weight:700;font-size:14px;letter-spacing:-.01em;
+      transition:transform .2s ease, box-shadow .2s ease;
+      box-shadow:0 8px 24px -10px rgba(90,169,255,.6);
+    }
+    .cta-header:hover{transform:translateY(-1px);box-shadow:0 14px 32px -10px rgba(90,169,255,.7)}
+    .cta-header .material-symbols-outlined{font-size:18px}
+    .lang-switch{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;letter-spacing:.06em;flex:none}
+    .lang-switch a{color:#9aa3bf;transition:color .2s ease}
+    .lang-switch a:hover{color:#fff}
+    .lang-switch .lang-active{color:#fff}
+    .lang-switch .lang-sep{color:#9aa3bf;font-weight:400}
+
+    @media (max-width:768px){
+      .nav{display:none}
+      .header-inner{padding:12px 18px}
+      .brand .word{font-size:18px}
+      .brand img{height:26px}
+      .cta-header{padding:8px 14px;font-size:13px}
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .site-footer{
+      padding:64px 0 32px;
+      border-top:1px solid rgba(255,255,255,.06);
+      background:rgba(4,7,18,.6);
+    }
+    .footer-grid{
+      display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;
+      margin-bottom:40px;
+    }
+    .footer-brand .brand{margin-bottom:14px}
+    .footer-brand .brand .word{font-size:24px}
+    .footer-tag{color:#b6c0db;font-size:14px;line-height:1.55;max-width:280px}
+    .footer-col h4{
+      font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+      color:#9ec0ff;font-weight:700;margin-bottom:16px;
+    }
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .footer-col a{font-size:14px;color:#b6c0db;transition:color .2s ease}
+    .footer-col a:hover{color:#fff}
+    .footer-bottom{
+      padding-top:24px;border-top:1px solid rgba(255,255,255,.06);
+      font-size:13px;color:#9aa3bf;text-align:center;
+    }
+    @media (max-width:900px){
+      .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+      .footer-brand{grid-column:1 / -1}
+    }
+    @media (max-width:560px){.footer-grid{grid-template-columns:1fr}}
+
+    /* ============================================================
+       LEGAL PAGE
+       ============================================================ */
+    .legal-hero{
+      padding:72px 0 44px;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .back-link{
+      display:inline-flex;align-items:center;gap:6px;
+      font-size:14px;color:#9ec0ff;font-weight:500;
+      margin-bottom:28px;
+      transition:color .2s ease;
+    }
+    .back-link:hover{color:#fff}
+    .back-link .material-symbols-outlined{
+      font-size:18px;
+      font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;
+    }
+    .legal-hero h1{
+      font-size:clamp(28px,4vw,48px);line-height:1.08;letter-spacing:-.03em;
+      font-weight:800;margin-bottom:12px;
+      background:linear-gradient(180deg,#fff 0%,#b9c8ff 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .legal-hero .meta{font-size:14px;color:#9aa3bf}
+
+    .legal-body{padding:60px 0 96px}
+    .legal-article{max-width:760px;margin:0 auto}
+
+    .legal-section{
+      margin-bottom:48px;
+      padding-bottom:48px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .legal-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+
+    .legal-section h2{
+      font-size:18px;font-weight:700;letter-spacing:-.01em;
+      color:#fff;margin-bottom:16px;
+    }
+    .legal-section p{
+      font-size:15px;line-height:1.75;color:#b6c0db;
+      margin-bottom:14px;
+    }
+    .legal-section p:last-child{margin-bottom:0}
+
+    .legal-section ul{
+      list-style:none;padding:0;margin:0 0 14px;
+      display:flex;flex-direction:column;gap:12px;
+    }
+    .legal-section ul:last-child{margin-bottom:0}
+    .legal-section ul li{
+      font-size:15px;line-height:1.7;color:#b6c0db;
+      padding-left:22px;position:relative;
+    }
+    .legal-section ul li::before{
+      content:"•";position:absolute;left:0;
+      color:#5aa9ff;font-weight:700;
+    }
+    .legal-section ul li strong{color:#d4deff}
+
+    .legal-sub-group{margin-bottom:20px}
+    .legal-sub-group h3{
+      font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+      color:#9ec0ff;margin-bottom:10px;
+    }
+
+    .legal-section a{
+      color:#5aa9ff;text-decoration:underline;text-underline-offset:3px;
+      transition:color .2s;
+    }
+    .legal-section a:hover{color:#fff}
+
+    @media (max-width:768px){
+      .legal-hero{padding:56px 0 32px}
+      .legal-body{padding:40px 0 72px}
+      .legal-section{margin-bottom:36px;padding-bottom:36px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Mozucat — Startseite">
+        <img src="assets/mozucat-cat.png" alt="" />
+        <span class="word">Mozucat</span>
+      </a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="/#features">Funktionen</a>
+        <a href="/#how">Funktionsweise</a>
+        <a href="/#screens">Screenshots</a>
+        <a href="/#ads">Werbetreibende</a>
+      </nav>
+      <div class="lang-switch" aria-label="Sprache">
+        <a href="privacy-policy.html">FR</a>
+        <span class="lang-sep">·</span>
+        <a href="privacy-policy-en.html">EN</a>
+        <span class="lang-sep">·</span>
+        <a href="privacy-policy-es.html">ES</a>
+        <span class="lang-sep">·</span>
+        <span class="lang-active">DE</span>
+        <span class="lang-sep">·</span>
+        <a href="privacy-policy-pt.html">PT</a>
+        <span class="lang-sep">·</span>
+        <a href="privacy-policy-ar.html">AR</a>
+        <span class="lang-sep">·</span>
+        <a href="privacy-policy-zh.html">中文</a>
+      </div>
+      <a class="cta-header" href="/#download">
+        <span class="material-symbols-outlined">download</span>
+        Herunterladen
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================ HERO ============================ -->
+    <div class="legal-hero">
+      <div class="container">
+        <a class="back-link" href="/">
+          <span class="material-symbols-outlined">arrow_back</span>
+          Zurück zur Website
+        </a>
+        <h1>Datenschutzrichtlinie</h1>
+        <p class="meta">Zuletzt aktualisiert: Mai 2026</p>
+      </div>
+    </div>
+
+    <!-- ============================ CONTENT ============================ -->
+    <div class="legal-body">
+      <div class="container">
+        <article class="legal-article">
+
+          <!-- 1. Einleitung -->
+          <section class="legal-section">
+            <h2>1. Einleitung</h2>
+            <p>Willkommen bei Mozucat („wir", „unser", „die App"). Wir verpflichten uns, Ihre Privatsphäre zu schützen. Diese Datenschutzrichtlinie erläutert, wie Mozucat mit Ihren Informationen umgeht, wenn Sie unsere IPTV-Streaming-App nutzen.</p>
+            <p>Mozucat ist eine Medienplayer-App, mit der Sie sich mit Ihren eigenen IPTV-Dienstanbietern verbinden können. Wir stellen keine Medieninhalte bereit, hosten oder verbreiten sie nicht.</p>
+          </section>
+
+          <!-- 2. Erfasste Informationen -->
+          <section class="legal-section">
+            <h2>2. Welche Informationen wir erfassen</h2>
+            <p>Mozucat erfasst und speichert die folgenden Informationen lokal auf Ihrem Gerät. Wenn Sie eine kostenlose Testversion, einen In-App-Kauf oder ein Mozucat-Pro-Abonnement aktivieren, werden bestimmte zusätzliche technische Daten, die in Abschnitt 9 beschrieben sind, auch von unseren Dienstleistern verarbeitet.</p>
+            <ul>
+              <li><strong>Server-Anmeldedaten:</strong> Die Server-URL, der Benutzername und das Passwort, die Sie zur Verbindung mit Ihrem IPTV-Dienst angeben. Sie werden sicher auf Ihrem Gerät gespeichert und niemals an unsere Server übertragen.</li>
+              <li><strong>Wiedergabeeinstellungen:</strong> Ihre Favoriten, Ihr Wiedergabeverlauf und Ihr Fortschritt, um Ihr Erlebnis zu verbessern.</li>
+              <li><strong>App-Einstellungen:</strong> Spracheinstellung, Anzeigeeinstellungen und andere in der App vorgenommene Konfigurationsoptionen.</li>
+              <li><strong>Zwischengespeicherte Daten:</strong> Vorübergehend zwischengespeicherte Inhaltsmetadaten (Sendernamen, Filminformationen, Coverbilder), um die Ladeleistung zu verbessern.</li>
+            </ul>
+          </section>
+
+          <!-- 3. Verwendung -->
+          <section class="legal-section">
+            <h2>3. Wie wir Ihre Informationen verwenden</h2>
+            <p>Ihre Informationen werden ausschließlich verwendet, um:</p>
+            <ul>
+              <li>In Ihrem Namen eine Verbindung zu Ihrem IPTV-Dienstanbieter herzustellen</li>
+              <li>Ihren Inhaltskatalog und Ihre Senderlisten anzuzeigen</li>
+              <li>Ihren Wiedergabefortschritt für die Fortsetzung der Wiedergabe zu verfolgen</li>
+              <li>Ihre Favoriten und benutzerdefinierten Listen zu verwalten</li>
+              <li>Ihren Zugang zu Mozucat Pro zu aktivieren, wiederherzustellen und zu verwalten</li>
+              <li>Ihre Berechtigung für eine kostenlose Testversion zu überprüfen und Missbrauch zu verhindern</li>
+              <li>Die App-Leistung durch lokales Zwischenspeichern zu verbessern</li>
+            </ul>
+          </section>
+
+          <!-- 4. Speicherung & Sicherheit -->
+          <section class="legal-section">
+            <h2>4. Datenspeicherung und -sicherheit</h2>
+            <p>Die meisten Ihrer IPTV- und Wiedergabedaten werden lokal auf Ihrem Gerät gespeichert. Wenn Sie In-App-Käufe von Mozucat Pro nutzen, können auch begrenzte technische Aufzeichnungen remote von unseren Dienstleistern verarbeitet werden, wie in Abschnitt 9 beschrieben.</p>
+            <ul>
+              <li>IPTV-Anmeldedaten werden in einem verschlüsselten lokalen Speicher gespeichert</li>
+              <li>Mozucat erfasst oder speichert keine Bankkarten- oder rohen Zahlungsdaten</li>
+              <li>Zahlungen werden von Apple oder Google verarbeitet, und der Abonnementstatus wird mit RevenueCat verwaltet</li>
+              <li>Die App verwendet keine Werbedaten und kein Verhaltens-Tracking durch Dritte</li>
+              <li>Zwischengespeicherte Daten können jederzeit in den Einstellungen Ihres Geräts gelöscht werden</li>
+            </ul>
+            <p>Bitte beachten Sie, dass bei der Verbindung mit Ihrem IPTV-Dienst Netzwerkanfragen direkt zwischen Ihrem Gerät und den Servern Ihres Dienstanbieters erfolgen. Mozucat hat keinen Einfluss darauf, wie Ihr Dienstanbieter mit Ihren Daten umgeht.</p>
+          </section>
+
+          <!-- 5. Drittanbieterdienste -->
+          <section class="legal-section">
+            <h2>5. Dienste von Drittanbietern</h2>
+            <p>Mozucat interagiert mit den folgenden Diensten von Drittanbietern:</p>
+            <ul>
+              <li><strong>Ihr IPTV-Dienstanbieter:</strong> Der von Ihnen konfigurierte Server verwaltet Ihre Streams und Ihren Inhaltskatalog. Deren Datenschutzrichtlinie regelt, wie sie mit Ihren Verbindungsdaten umgehen.</li>
+              <li><strong>Content-Delivery-Netzwerke:</strong> Coverbilder und Metadaten können aus externen, von Ihrem IPTV-Dienst bereitgestellten Quellen geladen werden.</li>
+            </ul>
+            <p>Wir verkaufen Ihre personenbezogenen Daten nicht. Die begrenzte Weitergabe, die für In-App-Käufe und die in dieser Richtlinie beschriebenen Dienste erforderlich ist, wird in Abschnitt 9 ausführlich beschrieben.</p>
+          </section>
+
+          <!-- 6. Ihre Rechte -->
+          <section class="legal-section">
+            <h2>6. Ihre Rechte und Wahlmöglichkeiten</h2>
+            <p>Sie haben die volle Kontrolle über Ihre Daten:</p>
+            <ul>
+              <li><strong>Alle Daten löschen:</strong> Die Deinstallation der App löscht alle lokal gespeicherten Daten.</li>
+              <li><strong>Cache leeren:</strong> Löschen Sie die zwischengespeicherten Inhaltsdaten in den App-Einstellungen.</li>
+              <li><strong>Favoriten verwalten:</strong> Fügen Sie jederzeit Favoriten hinzu oder entfernen Sie sie.</li>
+              <li><strong>Verlauf löschen:</strong> Löschen Sie Ihren Wiedergabeverlauf und Ihren Fortschritt.</li>
+              <li><strong>Abmelden:</strong> Melden Sie sich ab, um die gespeicherten Anmeldedaten zu entfernen.</li>
+              <li><strong>Abonnement verwalten:</strong> Aktivieren, wiederherstellen oder kündigen Sie Mozucat Pro in den Abonnementeinstellungen des App Store oder von Google Play.</li>
+            </ul>
+          </section>
+
+          <!-- 7. Kinder -->
+          <section class="legal-section">
+            <h2>7. Datenschutz für Kinder</h2>
+            <p>Mozucat richtet sich nicht an Kinder unter 13 Jahren. Wir erfassen wissentlich keine Informationen von Kindern. Die über die App verfügbaren Inhalte hängen vollständig vom IPTV-Dienstanbieter des Nutzers ab, und elterliche Aufsicht wird empfohlen.</p>
+          </section>
+
+          <!-- 8. Änderungen -->
+          <section class="legal-section">
+            <h2>8. Änderungen dieser Richtlinie</h2>
+            <p>Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Alle Änderungen werden in der App mit einem aktualisierten Datum „Zuletzt aktualisiert" angezeigt. Die fortgesetzte Nutzung der App nach den Änderungen gilt als Annahme der überarbeiteten Richtlinie.</p>
+          </section>
+
+          <!-- 9. In-App-Käufe -->
+          <section class="legal-section">
+            <h2>9. In-App-Käufe, Abonnements und Dienstleister</h2>
+            <p>Um Mozucat Pro zu verkaufen, zu aktivieren und wiederherzustellen, greifen wir auf Apple, Google und RevenueCat zurück. Mozucat erfasst oder speichert keine Kartennummern, Bankdaten oder andere rohe Zahlungsinformationen.</p>
+
+            <div class="legal-sub-group">
+              <h3>RevenueCat</h3>
+              <ul>
+                <li>RevenueCat fungiert als Auftragsverarbeiter für die Verwaltung von Abonnements, Zugangsberechtigungen und Kaufwiederherstellungen</li>
+                <li>Eine pseudonyme App-Kennung (<strong>appUserId</strong>) kann an RevenueCat übermittelt werden: Android-SSAID auf Android, im Keychain gespeicherte UUID-Kennung auf iOS</li>
+                <li>RevenueCat erhält außerdem begrenzte Metadaten im Zusammenhang mit Käufen und Abonnements, wie das gekaufte Produkt, den Abonnementstatus, die Berechtigung für bestimmte Angebote sowie die von Apple oder Google zurückgegebenen Store-, Länder- oder Währungsinformationen</li>
+                <li>Wir senden RevenueCat weder Ihre IPTV-Anmeldedaten noch Ihren Wiedergabeverlauf oder die von Ihnen angesehenen Inhalte</li>
+              </ul>
+            </div>
+
+            <div class="legal-sub-group">
+              <h3>App Store und Google Play</h3>
+              <ul>
+                <li>Apple und Google verarbeiten Zahlungen, Rechnungsstellung, Verlängerungen, Kündigungen und Rückerstattungen gemäß ihren eigenen Bedingungen und Datenschutzrichtlinien</li>
+                <li>Die im Bezahlvorgang angezeigten Preisinformationen, Belege und Kaufbestätigungen unterliegen dem für Ihre Transaktion verwendeten Store</li>
+              </ul>
+            </div>
+
+            <div class="legal-sub-group">
+              <h3>Android: Verhinderung von Testmissbrauch</h3>
+              <ul>
+                <li>Auf Android kann Mozucat ein Cloud-Firestore-Dokument <strong>mozucat_trials/{deviceId}</strong> erstellen oder aktualisieren, um die Berechtigung für eine kostenlose Testversion zu überprüfen und wiederholten Missbrauch zu verhindern</li>
+                <li>Dieses Dokument kann eine pseudonyme Gerätekennung, einen Status der Berechtigung oder Nutzung der Testversion und technische Zeitstempel enthalten</li>
+                <li>Dieses Dokument enthält keine Zahlungsdaten, IPTV-Anmeldedaten oder den Wiedergabeverlauf</li>
+              </ul>
+            </div>
+
+            <p>Wir verkaufen Ihre personenbezogenen Daten nicht. Wir geben nur die Daten weiter, die unbedingt erforderlich sind, um In-App-Käufe zu aktivieren, Abonnements zu verwalten und Testmissbrauch zu verhindern.</p>
+          </section>
+
+          <!-- 10. Push-Benachrichtigungen -->
+          <section class="legal-section">
+            <h2>10. Push-Benachrichtigungen und Mitteilungen</h2>
+            <p>Mozucat verwendet Push-Benachrichtigungsdienste (Firebase Cloud Messaging auf Android, Apple Push Notification Service auf iOS), um Benachrichtigungen an Ihr Gerät zu senden.</p>
+
+            <div class="legal-sub-group">
+              <h3>Erfasste Daten</h3>
+              <ul>
+                <li>Ein eindeutiges Push-Token, das von Ihrem Betriebssystem generiert wird und ausschließlich dazu dient, Benachrichtigungen an Ihr Gerät zu liefern</li>
+                <li>An diese Dienste werden keine personenbezogenen Daten, kein Wiedergabeverlauf und keine IPTV-Anmeldedaten gesendet</li>
+              </ul>
+            </div>
+
+            <div class="legal-sub-group">
+              <h3>Verwendung der Benachrichtigungen</h3>
+              <ul>
+                <li>Dienstbezogene Ereignisse (abgeschlossene Downloads, Wiedergabeereignisse, App-Updates)</li>
+                <li>Sicherheits- oder kontobezogene Warnungen</li>
+                <li>Optionale Ankündigungen zu neuen Funktionen</li>
+              </ul>
+            </div>
+
+            <div class="legal-sub-group">
+              <h3>Ihre Kontrolle</h3>
+              <ul>
+                <li>Sie können alle Push-Benachrichtigungen jederzeit in den Systemeinstellungen Ihres Geräts deaktivieren</li>
+                <li>Das Deaktivieren der Benachrichtigungen beeinträchtigt keine anderen Funktionen der App</li>
+              </ul>
+            </div>
+
+            <p>Diese Drittanbieterdienste verwalten die Zustellung der Nachrichten gemäß ihren eigenen Datenschutzrichtlinien. Wir geben keine Wiedergabedaten und keine Anmeldedaten an sie weiter.</p>
+          </section>
+
+          <!-- 11. Kontakt -->
+          <section class="legal-section">
+            <h2>11. Kontakt</h2>
+            <p>Wenn Sie Fragen zu dieser Datenschutzrichtlinie oder Ihren Daten haben, kontaktieren Sie uns bitte unter:</p>
+            <p><a href="mailto:support@mozucat.com">support@mozucat.com</a></p>
+          </section>
+
+        </article>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/">
+            <img src="assets/mozucat-cat.png" alt="" />
+            <span class="word">Mozucat</span>
+          </a>
+          <p class="footer-tag">Das IPTV-Erlebnis, verfeinert.</p>
+        </div>
+        <div class="footer-col">
+          <h4>App</h4>
+          <ul>
+            <li><a href="#">App Store</a></li>
+            <li><a href="#">Google Play</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="terms-de.html">Nutzungsbedingungen</a></li>
+            <li><a href="privacy-policy-de.html" aria-current="page">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:contact@mozucat.com">contact@mozucat.com</a></li>
+            <li><a href="mailto:support@mozucat.com">support@mozucat.com</a></li>
+            <li><a href="mailto:ads@mozucat.com">ads@mozucat.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Mozucat. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

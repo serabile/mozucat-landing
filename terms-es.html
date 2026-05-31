@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#040712" />
+
+  <title>Condiciones de uso — Mozucat</title>
+  <meta name="description" content="Condiciones de uso de Mozucat, la aplicación IPTV premium para iPhone, Android y TV." />
+  <link rel="canonical" href="https://mozucat.com/terms-es" />
+  <link rel="icon" type="image/png" href="assets/mozucat-cat.png" />
+  <link rel="apple-touch-icon" href="assets/mozucat-cat.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & ROOT
+       ============================================================ */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+    html{scroll-behavior:smooth}
+    html,body{
+      background:#040712;color:#fff;
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+      min-height:100vh;overflow-x:hidden;
+      -webkit-text-size-adjust:100%;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+    .material-symbols-outlined{
+      font-family:"Material Symbols Outlined";
+      font-weight:normal;font-style:normal;line-height:1;
+      letter-spacing:normal;text-transform:none;display:inline-block;
+      white-space:nowrap;word-wrap:normal;direction:ltr;
+      -webkit-font-feature-settings:"liga";font-feature-settings:"liga";
+      -webkit-font-smoothing:antialiased;
+      font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 24;
+    }
+
+    /* ============================================================
+       GLOBAL BACKGROUND
+       ============================================================ */
+    body{
+      background:
+        radial-gradient(900px 700px at 50% -100px, rgba(90,169,255,.22), transparent 60%),
+        radial-gradient(800px 800px at 85% 35%, rgba(255,48,87,.10), transparent 65%),
+        radial-gradient(700px 700px at 10% 55%, rgba(95,226,191,.10), transparent 65%),
+        linear-gradient(180deg,#0c1736 0%,#070a1a 38%,#040712 100%);
+      background-attachment:fixed;
+    }
+    body::before{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+      background-size:60px 60px;
+      mask-image:radial-gradient(60% 50% at 50% 30%,#000 40%,transparent 80%);
+      -webkit-mask-image:radial-gradient(60% 50% at 50% 30%,#000 40%,transparent 80%);
+    }
+    body::after{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+      background:
+        radial-gradient(2px 2px at 14% 18%, rgba(255,255,255,.5), transparent 60%),
+        radial-gradient(2px 2px at 78% 12%, rgba(255,255,255,.6), transparent 60%),
+        radial-gradient(2px 2px at 22% 82%, rgba(255,255,255,.5), transparent 60%),
+        radial-gradient(2px 2px at 88% 64%, rgba(255,255,255,.55), transparent 60%),
+        radial-gradient(2px 2px at 50% 92%, rgba(255,255,255,.4), transparent 60%);
+    }
+    main, header, footer{position:relative;z-index:1}
+
+    /* ============================================================
+       UTILITIES
+       ============================================================ */
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+
+    /* ============================================================
+       HEADER
+       ============================================================ */
+    .site-header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      background:rgba(7,10,26,.65);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .header-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 24px;max-width:1200px;margin:0 auto;gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;flex:none}
+    .brand img{height:32px;width:auto;filter:drop-shadow(0 4px 12px rgba(90,169,255,.4))}
+    .brand .word{
+      font-size:22px;font-weight:900;letter-spacing:-.03em;
+      background:linear-gradient(180deg,#fff 0%,#b9c8ff 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .nav{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:14px;font-weight:500;color:#b6c0db;transition:color .2s ease}
+    .nav a:hover{color:#fff}
+    .cta-header{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:9px 16px;border-radius:999px;
+      background:linear-gradient(135deg,#5aa9ff 0%,#5fe2bf 100%);
+      color:#040712;font-weight:700;font-size:14px;letter-spacing:-.01em;
+      transition:transform .2s ease, box-shadow .2s ease;
+      box-shadow:0 8px 24px -10px rgba(90,169,255,.6);
+    }
+    .cta-header:hover{transform:translateY(-1px);box-shadow:0 14px 32px -10px rgba(90,169,255,.7)}
+    .cta-header .material-symbols-outlined{font-size:18px}
+    .lang-switch{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;letter-spacing:.06em;flex:none}
+    .lang-switch a{color:#9aa3bf;transition:color .2s ease}
+    .lang-switch a:hover{color:#fff}
+    .lang-switch .lang-active{color:#fff}
+    .lang-switch .lang-sep{color:#9aa3bf;font-weight:400}
+
+    @media (max-width:768px){
+      .nav{display:none}
+      .header-inner{padding:12px 18px}
+      .brand .word{font-size:18px}
+      .brand img{height:26px}
+      .cta-header{padding:8px 14px;font-size:13px}
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .site-footer{
+      padding:64px 0 32px;
+      border-top:1px solid rgba(255,255,255,.06);
+      background:rgba(4,7,18,.6);
+    }
+    .footer-grid{
+      display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;
+      margin-bottom:40px;
+    }
+    .footer-brand .brand{margin-bottom:14px}
+    .footer-brand .brand .word{font-size:24px}
+    .footer-tag{color:#b6c0db;font-size:14px;line-height:1.55;max-width:280px}
+    .footer-col h4{
+      font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+      color:#9ec0ff;font-weight:700;margin-bottom:16px;
+    }
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .footer-col a{font-size:14px;color:#b6c0db;transition:color .2s ease}
+    .footer-col a:hover{color:#fff}
+    .footer-bottom{
+      padding-top:24px;border-top:1px solid rgba(255,255,255,.06);
+      font-size:13px;color:#9aa3bf;text-align:center;
+    }
+    @media (max-width:900px){
+      .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+      .footer-brand{grid-column:1 / -1}
+    }
+    @media (max-width:560px){.footer-grid{grid-template-columns:1fr}}
+
+    /* ============================================================
+       LEGAL PAGE
+       ============================================================ */
+    .legal-hero{
+      padding:72px 0 44px;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .back-link{
+      display:inline-flex;align-items:center;gap:6px;
+      font-size:14px;color:#9ec0ff;font-weight:500;
+      margin-bottom:28px;
+      transition:color .2s ease;
+    }
+    .back-link:hover{color:#fff}
+    .back-link .material-symbols-outlined{
+      font-size:18px;
+      font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;
+    }
+    .legal-hero h1{
+      font-size:clamp(28px,4vw,48px);line-height:1.08;letter-spacing:-.03em;
+      font-weight:800;margin-bottom:12px;
+      background:linear-gradient(180deg,#fff 0%,#b9c8ff 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .legal-hero .meta{font-size:14px;color:#9aa3bf}
+
+    .legal-body{padding:60px 0 96px}
+    .legal-article{max-width:760px;margin:0 auto}
+
+    .legal-section{
+      margin-bottom:48px;
+      padding-bottom:48px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .legal-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+
+    .legal-section h2{
+      font-size:18px;font-weight:700;letter-spacing:-.01em;
+      color:#fff;margin-bottom:16px;
+    }
+    .legal-section p{
+      font-size:15px;line-height:1.75;color:#b6c0db;
+      margin-bottom:14px;
+    }
+    .legal-section p:last-child{margin-bottom:0}
+
+    .legal-section ul{
+      list-style:none;padding:0;margin:0 0 14px;
+      display:flex;flex-direction:column;gap:12px;
+    }
+    .legal-section ul:last-child{margin-bottom:0}
+    .legal-section ul li{
+      font-size:15px;line-height:1.7;color:#b6c0db;
+      padding-left:22px;position:relative;
+    }
+    .legal-section ul li::before{
+      content:"•";position:absolute;left:0;
+      color:#5aa9ff;font-weight:700;
+    }
+    .legal-section ul li strong{color:#d4deff}
+
+    .legal-sub-group{margin-bottom:20px}
+    .legal-sub-group h3{
+      font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+      color:#9ec0ff;margin-bottom:10px;
+    }
+
+    .legal-section a{
+      color:#5aa9ff;text-decoration:underline;text-underline-offset:3px;
+      transition:color .2s;
+    }
+    .legal-section a:hover{color:#fff}
+
+    @media (max-width:768px){
+      .legal-hero{padding:56px 0 32px}
+      .legal-body{padding:40px 0 72px}
+      .legal-section{margin-bottom:36px;padding-bottom:36px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Mozucat — inicio">
+        <img src="assets/mozucat-cat.png" alt="" />
+        <span class="word">Mozucat</span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="/#features">Funcionalidades</a>
+        <a href="/#how">Cómo funciona</a>
+        <a href="/#screens">Capturas</a>
+        <a href="/#ads">Anunciantes</a>
+      </nav>
+      <div class="lang-switch" aria-label="Idioma">
+        <a href="terms.html">FR</a>
+        <span class="lang-sep">·</span>
+        <a href="terms-en.html">EN</a>
+        <span class="lang-sep">·</span>
+        <span class="lang-active">ES</span>
+        <span class="lang-sep">·</span>
+        <a href="terms-de.html">DE</a>
+        <span class="lang-sep">·</span>
+        <a href="terms-pt.html">PT</a>
+        <span class="lang-sep">·</span>
+        <a href="terms-ar.html">AR</a>
+        <span class="lang-sep">·</span>
+        <a href="terms-zh.html">中文</a>
+      </div>
+      <a class="cta-header" href="/#download">
+        <span class="material-symbols-outlined">download</span>
+        Descargar
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================ HERO ============================ -->
+    <div class="legal-hero">
+      <div class="container">
+        <a class="back-link" href="/">
+          <span class="material-symbols-outlined">arrow_back</span>
+          Volver al sitio
+        </a>
+        <h1>Condiciones de uso</h1>
+        <p class="meta">Última actualización: mayo de 2026</p>
+      </div>
+    </div>
+
+    <!-- ============================ CONTENT ============================ -->
+    <div class="legal-body">
+      <div class="container">
+        <article class="legal-article">
+
+          <!-- 1. Aceptación -->
+          <section class="legal-section">
+            <h2>1. Aceptación de las condiciones</h2>
+            <p>Al descargar, instalar o utilizar Mozucat («la Aplicación»), usted acepta quedar vinculado por estas Condiciones de uso («Condiciones»). Si no acepta estas Condiciones, no utilice la Aplicación.</p>
+            <p>Estas Condiciones constituyen un acuerdo legalmente vinculante entre usted y Mozucat en relación con su uso de la aplicación.</p>
+          </section>
+
+          <!-- 2. Descripción del servicio -->
+          <section class="legal-section">
+            <h2>2. Descripción del servicio</h2>
+            <p>Mozucat es una aplicación de reproductor multimedia que le permite conectarse y reproducir contenido desde proveedores de servicios IPTV utilizando sus propias credenciales y suscripciones.</p>
+            <ul>
+              <li>Mozucat <strong>NO</strong> proporciona, <strong>NO</strong> aloja, <strong>NO</strong> almacena ni <strong>NO</strong> distribuye contenido multimedia</li>
+              <li>Mozucat <strong>NO</strong> actúa como proveedor de servicios IPTV</li>
+              <li>Mozucat es únicamente una aplicación cliente para acceder a sus servicios IPTV existentes</li>
+              <li>Todo el contenido accesible a través de la Aplicación es proporcionado por proveedores de servicios IPTV de terceros configurados por el usuario</li>
+            </ul>
+          </section>
+
+          <!-- 3. Responsabilidades -->
+          <section class="legal-section">
+            <h2>3. Responsabilidades del usuario</h2>
+            <p>Como usuario de Mozucat, usted acepta:</p>
+            <ul>
+              <li>Utilizar únicamente credenciales de servicios IPTV obtenidas legalmente</li>
+              <li>Asegurarse de que sus suscripciones a servicios IPTV sean válidas y legítimas</li>
+              <li>Cumplir con todas las leyes locales, nacionales e internacionales aplicables en materia de transmisión de contenido y derechos de autor</li>
+              <li>No utilizar la Aplicación con fines ilegales, no autorizados o prohibidos</li>
+              <li>No intentar desensamblar, descompilar ni aplicar ingeniería inversa a la Aplicación</li>
+              <li>No redistribuir ni revender la Aplicación o cualquier parte de ella</li>
+            </ul>
+            <p>Usted es el único responsable del contenido al que accede a través de su proveedor de servicios IPTV y de garantizar que dicho acceso cumpla con las leyes aplicables.</p>
+          </section>
+
+          <!-- 4. Propiedad intelectual -->
+          <section class="legal-section">
+            <h2>4. Propiedad intelectual</h2>
+            <p>La aplicación Mozucat, incluido su diseño, código, gráficos, logotipo e interfaz de usuario, es propiedad intelectual de Mozucat y está protegida por las leyes aplicables sobre derechos de autor y marcas.</p>
+            <ul>
+              <li>Se le concede una licencia limitada, no exclusiva e intransferible para utilizar la Aplicación con fines personales y no comerciales</li>
+              <li>No puede copiar, modificar, distribuir ni crear obras derivadas basadas en la Aplicación</li>
+              <li>El nombre, el logotipo y la imagen de marca de Mozucat son marcas de Mozucat</li>
+            </ul>
+          </section>
+
+          <!-- 5. Aviso sobre el contenido -->
+          <section class="legal-section">
+            <h2>5. Aviso sobre el contenido</h2>
+            <p>Mozucat funciona exclusivamente como una aplicación de reproductor multimedia y cliente. Queremos dejar claro que:</p>
+            <ul>
+              <li>No tenemos ningún control sobre el contenido proporcionado por su servicio IPTV</li>
+              <li>No respaldamos, no verificamos ni asumimos responsabilidad alguna por el contenido de terceros accesible a través de la Aplicación</li>
+              <li>No somos responsables de la exactitud, la legalidad ni la calidad del contenido de su proveedor IPTV</li>
+              <li>La disponibilidad y la calidad del contenido dependen enteramente de su proveedor de servicios IPTV</li>
+            </ul>
+            <p>Cualquier problema relacionado con el contenido debe dirigirse a su proveedor de servicios IPTV.</p>
+          </section>
+
+          <!-- 6. Limitación de responsabilidad -->
+          <section class="legal-section">
+            <h2>6. Limitación de responsabilidad</h2>
+            <p>En la medida máxima permitida por la legislación aplicable:</p>
+            <ul>
+              <li>La Aplicación se proporciona «tal cual» y «según disponibilidad», sin garantía de ningún tipo, expresa o implícita</li>
+              <li>No garantizamos un funcionamiento ininterrumpido, libre de errores o seguro de la Aplicación</li>
+              <li>No somos responsables de los problemas de calidad de transmisión, almacenamiento en búfer o interrupciones del servicio de su proveedor IPTV</li>
+              <li>No somos responsables de los daños indirectos, incidentales, especiales o consecuentes derivados de su uso de la Aplicación</li>
+              <li>Nuestra responsabilidad total no superará el importe que haya pagado por la Aplicación</li>
+            </ul>
+          </section>
+
+          <!-- 7. Cuenta y datos -->
+          <section class="legal-section">
+            <h2>7. Cuenta y datos</h2>
+            <p>Usted es responsable de:</p>
+            <ul>
+              <li>Mantener la confidencialidad de sus credenciales de servicio IPTV</li>
+              <li>Toda actividad que se produzca al utilizar sus conexiones de servicio configuradas</li>
+              <li>Garantizar la seguridad de su dispositivo para proteger los datos almacenados localmente</li>
+            </ul>
+            <p>Mozucat almacena la mayoría de los datos de IPTV localmente en su dispositivo. No mantenemos una cuenta en la nube para sus credenciales IPTV ni para su historial de visualización. No obstante, para las compras de Mozucat Pro, nuestros proveedores de pago y suscripción pueden conservar un identificador de aplicación seudónimo y el estado de sus derechos de acceso. Desinstalar la Aplicación eliminará todos los datos almacenados localmente, incluidas las credenciales guardadas, los favoritos y el historial de visualización.</p>
+          </section>
+
+          <!-- 8. Indemnización -->
+          <section class="legal-section">
+            <h2>8. Indemnización</h2>
+            <p>Al utilizar Mozucat, usted acepta defender, indemnizar y eximir de responsabilidad a Mozucat, sus desarrolladores, colaboradores y filiales frente a cualquier reclamación, daño, responsabilidad, pérdida, coste o gasto (incluidos los honorarios razonables de abogados) que se deriven de o estén relacionados con:</p>
+            <ul>
+              <li>Su uso o uso indebido de la Aplicación</li>
+              <li>Su incumplimiento de estas Condiciones</li>
+              <li>Su infracción de cualquier ley, reglamento o derecho de terceros (incluidos los derechos de propiedad intelectual y de privacidad)</li>
+              <li>Cualquier contenido al que acceda, que reproduzca, grabe o distribuya a través del proveedor de servicios IPTV al que se conecta</li>
+              <li>Cualquier disputa entre usted y su proveedor de servicios IPTV</li>
+            </ul>
+            <p>Mozucat no selecciona, aloja, recomienda, respalda, indexa ni controla los proveedores IPTV, las listas de reproducción ni los contenidos a los que usted elige acceder. Usted es el único responsable de la legalidad de las credenciales, servicios, listas de reproducción y contenidos que utiliza con la Aplicación. La Aplicación no proporciona ninguna lista de proveedores ni ningún servicio preconfigurado.</p>
+          </section>
+
+          <!-- 9. Suscripciones Mozucat Pro -->
+          <section class="legal-section">
+            <h2>9. Suscripciones Mozucat Pro</h2>
+            <p>Mozucat puede ofrecer compras dentro de la aplicación de pago que dan acceso a funciones premium bajo la marca Mozucat Pro. Las ofertas disponibles pueden incluir:</p>
+            <ul>
+              <li><strong>Monthly:</strong> suscripción de renovación automática de un mes</li>
+              <li><strong>Annual:</strong> suscripción de renovación automática de un año</li>
+              <li><strong>Lifetime:</strong> compra única que da acceso a Mozucat Pro sin renovación recurrente, según las condiciones de disponibilidad del servicio y de la cuenta de tienda utilizada para la compra</li>
+            </ul>
+            <p>El precio de referencia, la moneda aplicable, los impuestos eventuales, la duración exacta y las ventajas incluidas para cada oferta se muestran siempre en la pantalla de compra y en el flujo de pago de App Store o Google Play antes de la confirmación de su pedido. El precio mostrado en el momento del pago es el que prevalece.</p>
+            <p>Las ofertas Monthly y Annual se renuevan automáticamente salvo que se cancelen desde los ajustes de suscripción de su cuenta de App Store o Google Play antes de la siguiente fecha de facturación. La cancelación surte efecto al final del período en curso; no se concede ningún reembolso parcial por un período ya iniciado, salvo disposición legal imperativa o política contraria de la tienda correspondiente.</p>
+            <p>Cuando se ofrece una prueba gratuita de 7 días, está reservada a los usuarios elegibles indicados en la pantalla de compra. Salvo cancelación antes del final de la prueba según las reglas de la tienda aplicable, la prueba se convierte automáticamente en una suscripción de pago a la tarifa mostrada.</p>
+            <p>Todos los pagos, renovaciones, facturas y reembolsos los procesa Apple o Google, según la tienda utilizada para la compra. Las solicitudes de reembolso deben dirigirse a App Store o a Google Play de acuerdo con sus respectivas políticas. Salvo cuando la legislación aplicable o la política de la tienda lo exijan, las compras Lifetime y los períodos de suscripción ya facturados no son reembolsables tras la activación del acceso.</p>
+            <p>En la medida permitida por la legislación aplicable, si solicita la ejecución inmediata de un contenido o servicio digital de pago, usted reconoce que el derecho de desistimiento eventualmente aplicable puede extinguirse una vez que el acceso ha comenzado.</p>
+          </section>
+
+          <!-- 10. Notificaciones push -->
+          <section class="legal-section">
+            <h2>10. Notificaciones push</h2>
+            <p>Al utilizar la Aplicación, usted consiente recibir notificaciones push de Mozucat en su dispositivo, en particular:</p>
+            <ul>
+              <li>Notificaciones relacionadas con el servicio (descargas completadas, eventos de reproducción, actualizaciones de la aplicación)</li>
+              <li>Notificaciones relacionadas con la cuenta (estado de la suscripción, alertas de seguridad)</li>
+              <li>Notificaciones promocionales opcionales (nuevas funciones, anuncios importantes)</li>
+            </ul>
+            <p>Puede desactivar las notificaciones en cualquier momento desde la configuración del sistema de su dispositivo. Algunas notificaciones relacionadas con el servicio pueden ser necesarias para el correcto funcionamiento de la Aplicación y no pueden desactivarse desde la Aplicación.</p>
+            <p>Nunca enviaremos notificaciones que contengan datos personales sensibles a través de canales no seguros.</p>
+          </section>
+
+          <!-- 11. Derechos de autor -->
+          <section class="legal-section">
+            <h2>11. Reclamaciones por infracción de derechos de autor y avisos de retirada</h2>
+            <p>Mozucat es una aplicación de reproducción multimedia. No alojamos, no almacenamos, no distribuimos, no transmitimos ni indexamos ningún contenido audiovisual. Todos los contenidos reproducidos a través de la Aplicación son proporcionados por los proveedores de servicios IPTV seleccionados y configurados por el usuario.</p>
+            <p>Si considera que un contenido accesible a través de un proveedor IPTV infringe sus derechos:</p>
+            <ul>
+              <li>Dirija su reclamación al proveedor de servicios IPTV que aloja y distribuye el contenido. Mozucat no tiene la capacidad de eliminar, bloquear ni modificar contenidos en servidores de terceros.</li>
+              <li>Contáctenos en <a href="mailto:support@mozucat.com">support@mozucat.com</a> si cree que se nos ha dirigido una reclamación por error. Le proporcionaremos indicaciones razonables para ayudarle a llegar a la parte competente.</li>
+            </ul>
+            <p>Nos reservamos el derecho de cooperar con las solicitudes legales válidas de las autoridades competentes en la medida en que la legislación aplicable lo exija.</p>
+          </section>
+
+          <!-- 12. Resolución -->
+          <section class="legal-section">
+            <h2>12. Resolución</h2>
+            <p>Nos reservamos el derecho de:</p>
+            <ul>
+              <li>Interrumpir o modificar la Aplicación en cualquier momento sin previo aviso</li>
+              <li>Denegar el servicio a cualquier persona por cualquier motivo en cualquier momento</li>
+            </ul>
+            <p>Puede poner fin a su uso de la Aplicación en cualquier momento desinstalándola de su dispositivo. Tras la resolución, se eliminarán todos los datos almacenados localmente.</p>
+          </section>
+
+          <!-- 13. Legislación aplicable -->
+          <section class="legal-section">
+            <h2>13. Legislación aplicable</h2>
+            <p>Estas Condiciones se rigen e interpretan de conformidad con la legislación aplicable, sin tener en cuenta los principios de conflicto de leyes. Cualquier disputa que surja de estas Condiciones o de su uso de la Aplicación se resolverá por las vías legales apropiadas en la jurisdicción aplicable.</p>
+          </section>
+
+          <!-- 14. Modificaciones -->
+          <section class="legal-section">
+            <h2>14. Modificaciones de estas condiciones</h2>
+            <p>Nos reservamos el derecho de modificar estas Condiciones en cualquier momento. Las modificaciones se reflejarán en la Aplicación con una fecha de «Última actualización» actualizada. El uso continuado de la Aplicación tras cualquier modificación constituye la aceptación de las Condiciones revisadas.</p>
+            <p>Le recomendamos que consulte estas Condiciones periódicamente para mantenerse informado de cualquier actualización.</p>
+          </section>
+
+          <!-- 15. Contacto -->
+          <section class="legal-section">
+            <h2>15. Contáctenos</h2>
+            <p>Si tiene alguna pregunta sobre estas Condiciones de uso, contáctenos en:</p>
+            <p><a href="mailto:support@mozucat.com">support@mozucat.com</a></p>
+          </section>
+
+        </article>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/">
+            <img src="assets/mozucat-cat.png" alt="" />
+            <span class="word">Mozucat</span>
+          </a>
+          <p class="footer-tag">La experiencia IPTV, cuidada.</p>
+        </div>
+        <div class="footer-col">
+          <h4>App</h4>
+          <ul>
+            <li><a href="#">App Store</a></li>
+            <li><a href="#">Google Play</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="terms-es.html" aria-current="page">Aviso legal</a></li>
+            <li><a href="privacy-policy-es.html">Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:contact@mozucat.com">contact@mozucat.com</a></li>
+            <li><a href="mailto:support@mozucat.com">support@mozucat.com</a></li>
+            <li><a href="mailto:ads@mozucat.com">ads@mozucat.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Mozucat. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
