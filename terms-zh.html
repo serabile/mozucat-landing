@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#040712" />
+
+  <title>使用条款 — Mozucat</title>
+  <meta name="description" content="Mozucat 的使用条款，适用于 iPhone、Android 和电视的高级 IPTV 应用。" />
+  <link rel="canonical" href="https://mozucat.com/terms-zh" />
+  <link rel="icon" type="image/png" href="assets/mozucat-cat.png" />
+  <link rel="apple-touch-icon" href="assets/mozucat-cat.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & ROOT
+       ============================================================ */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+    html{scroll-behavior:smooth}
+    html,body{
+      background:#040712;color:#fff;
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+      min-height:100vh;overflow-x:hidden;
+      -webkit-text-size-adjust:100%;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+    .material-symbols-outlined{
+      font-family:"Material Symbols Outlined";
+      font-weight:normal;font-style:normal;line-height:1;
+      letter-spacing:normal;text-transform:none;display:inline-block;
+      white-space:nowrap;word-wrap:normal;direction:ltr;
+      -webkit-font-feature-settings:"liga";font-feature-settings:"liga";
+      -webkit-font-smoothing:antialiased;
+      font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 24;
+    }
+
+    /* ============================================================
+       GLOBAL BACKGROUND
+       ============================================================ */
+    body{
+      background:
+        radial-gradient(900px 700px at 50% -100px, rgba(90,169,255,.22), transparent 60%),
+        radial-gradient(800px 800px at 85% 35%, rgba(255,48,87,.10), transparent 65%),
+        radial-gradient(700px 700px at 10% 55%, rgba(95,226,191,.10), transparent 65%),
+        linear-gradient(180deg,#0c1736 0%,#070a1a 38%,#040712 100%);
+      background-attachment:fixed;
+    }
+    body::before{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+      background-size:60px 60px;
+      mask-image:radial-gradient(60% 50% at 50% 30%,#000 40%,transparent 80%);
+      -webkit-mask-image:radial-gradient(60% 50% at 50% 30%,#000 40%,transparent 80%);
+    }
+    body::after{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+      background:
+        radial-gradient(2px 2px at 14% 18%, rgba(255,255,255,.5), transparent 60%),
+        radial-gradient(2px 2px at 78% 12%, rgba(255,255,255,.6), transparent 60%),
+        radial-gradient(2px 2px at 22% 82%, rgba(255,255,255,.5), transparent 60%),
+        radial-gradient(2px 2px at 88% 64%, rgba(255,255,255,.55), transparent 60%),
+        radial-gradient(2px 2px at 50% 92%, rgba(255,255,255,.4), transparent 60%);
+    }
+    main, header, footer{position:relative;z-index:1}
+
+    /* ============================================================
+       UTILITIES
+       ============================================================ */
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+
+    /* ============================================================
+       HEADER
+       ============================================================ */
+    .site-header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      background:rgba(7,10,26,.65);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .header-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 24px;max-width:1200px;margin:0 auto;gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;flex:none}
+    .brand img{height:32px;width:auto;filter:drop-shadow(0 4px 12px rgba(90,169,255,.4))}
+    .brand .word{
+      font-size:22px;font-weight:900;letter-spacing:-.03em;
+      background:linear-gradient(180deg,#fff 0%,#b9c8ff 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .nav{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:14px;font-weight:500;color:#b6c0db;transition:color .2s ease}
+    .nav a:hover{color:#fff}
+    .cta-header{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:9px 16px;border-radius:999px;
+      background:linear-gradient(135deg,#5aa9ff 0%,#5fe2bf 100%);
+      color:#040712;font-weight:700;font-size:14px;letter-spacing:-.01em;
+      transition:transform .2s ease, box-shadow .2s ease;
+      box-shadow:0 8px 24px -10px rgba(90,169,255,.6);
+    }
+    .cta-header:hover{transform:translateY(-1px);box-shadow:0 14px 32px -10px rgba(90,169,255,.7)}
+    .cta-header .material-symbols-outlined{font-size:18px}
+    .lang-switch{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;letter-spacing:.06em;flex:none}
+    .lang-switch a{color:#9aa3bf;transition:color .2s ease}
+    .lang-switch a:hover{color:#fff}
+    .lang-switch .lang-active{color:#fff}
+    .lang-switch .lang-sep{color:#9aa3bf;font-weight:400}
+
+    @media (max-width:768px){
+      .nav{display:none}
+      .header-inner{padding:12px 18px}
+      .brand .word{font-size:18px}
+      .brand img{height:26px}
+      .cta-header{padding:8px 14px;font-size:13px}
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .site-footer{
+      padding:64px 0 32px;
+      border-top:1px solid rgba(255,255,255,.06);
+      background:rgba(4,7,18,.6);
+    }
+    .footer-grid{
+      display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;
+      margin-bottom:40px;
+    }
+    .footer-brand .brand{margin-bottom:14px}
+    .footer-brand .brand .word{font-size:24px}
+    .footer-tag{color:#b6c0db;font-size:14px;line-height:1.55;max-width:280px}
+    .footer-col h4{
+      font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+      color:#9ec0ff;font-weight:700;margin-bottom:16px;
+    }
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .footer-col a{font-size:14px;color:#b6c0db;transition:color .2s ease}
+    .footer-col a:hover{color:#fff}
+    .footer-bottom{
+      padding-top:24px;border-top:1px solid rgba(255,255,255,.06);
+      font-size:13px;color:#9aa3bf;text-align:center;
+    }
+    @media (max-width:900px){
+      .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+      .footer-brand{grid-column:1 / -1}
+    }
+    @media (max-width:560px){.footer-grid{grid-template-columns:1fr}}
+
+    /* ============================================================
+       LEGAL PAGE
+       ============================================================ */
+    .legal-hero{
+      padding:72px 0 44px;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .back-link{
+      display:inline-flex;align-items:center;gap:6px;
+      font-size:14px;color:#9ec0ff;font-weight:500;
+      margin-bottom:28px;
+      transition:color .2s ease;
+    }
+    .back-link:hover{color:#fff}
+    .back-link .material-symbols-outlined{
+      font-size:18px;
+      font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;
+    }
+    .legal-hero h1{
+      font-size:clamp(28px,4vw,48px);line-height:1.08;letter-spacing:-.03em;
+      font-weight:800;margin-bottom:12px;
+      background:linear-gradient(180deg,#fff 0%,#b9c8ff 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .legal-hero .meta{font-size:14px;color:#9aa3bf}
+
+    .legal-body{padding:60px 0 96px}
+    .legal-article{max-width:760px;margin:0 auto}
+
+    .legal-section{
+      margin-bottom:48px;
+      padding-bottom:48px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .legal-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+
+    .legal-section h2{
+      font-size:18px;font-weight:700;letter-spacing:-.01em;
+      color:#fff;margin-bottom:16px;
+    }
+    .legal-section p{
+      font-size:15px;line-height:1.85;color:#b6c0db;
+      margin-bottom:14px;
+    }
+    .legal-section p:last-child{margin-bottom:0}
+
+    .legal-section ul{
+      list-style:none;padding:0;margin:0 0 14px;
+      display:flex;flex-direction:column;gap:12px;
+    }
+    .legal-section ul:last-child{margin-bottom:0}
+    .legal-section ul li{
+      font-size:15px;line-height:1.8;color:#b6c0db;
+      padding-left:22px;position:relative;
+    }
+    .legal-section ul li::before{
+      content:"•";position:absolute;left:0;
+      color:#5aa9ff;font-weight:700;
+    }
+    .legal-section ul li strong{color:#d4deff}
+
+    .legal-sub-group{margin-bottom:20px}
+    .legal-sub-group h3{
+      font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+      color:#9ec0ff;margin-bottom:10px;
+    }
+
+    .legal-section a{
+      color:#5aa9ff;text-decoration:underline;text-underline-offset:3px;
+      transition:color .2s;
+    }
+    .legal-section a:hover{color:#fff}
+
+    @media (max-width:768px){
+      .legal-hero{padding:56px 0 32px}
+      .legal-body{padding:40px 0 72px}
+      .legal-section{margin-bottom:36px;padding-bottom:36px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Mozucat — 首页">
+        <img src="assets/mozucat-cat.png" alt="" />
+        <span class="word">Mozucat</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="/#features">功能</a>
+        <a href="/#how">工作原理</a>
+        <a href="/#screens">截图</a>
+        <a href="/#ads">广告主</a>
+      </nav>
+      <div class="lang-switch" aria-label="语言">
+        <a href="terms.html">FR</a>
+        <span class="lang-sep">·</span>
+        <a href="terms-en.html">EN</a>
+        <span class="lang-sep">·</span>
+        <a href="terms-es.html">ES</a>
+        <span class="lang-sep">·</span>
+        <a href="terms-de.html">DE</a>
+        <span class="lang-sep">·</span>
+        <a href="terms-pt.html">PT</a>
+        <span class="lang-sep">·</span>
+        <a href="terms-ar.html">AR</a>
+        <span class="lang-sep">·</span>
+        <span class="lang-active">中文</span>
+      </div>
+      <a class="cta-header" href="/#download">
+        <span class="material-symbols-outlined">download</span>
+        下载
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================ HERO ============================ -->
+    <div class="legal-hero">
+      <div class="container">
+        <a class="back-link" href="/">
+          <span class="material-symbols-outlined">arrow_back</span>
+          返回网站
+        </a>
+        <h1>使用条款</h1>
+        <p class="meta">最后更新：2026年5月</p>
+      </div>
+    </div>
+
+    <!-- ============================ CONTENT ============================ -->
+    <div class="legal-body">
+      <div class="container">
+        <article class="legal-article">
+
+          <!-- 1. 接受 -->
+          <section class="legal-section">
+            <h2>1. 条款的接受</h2>
+            <p>通过下载、安装或使用 Mozucat（"本应用"），即表示您同意受本使用条款（"条款"）的约束。如果您不接受这些条款，请勿使用本应用。</p>
+            <p>这些条款构成您与 Mozucat 之间关于您使用本应用的具有法律约束力的协议。</p>
+          </section>
+
+          <!-- 2. 服务说明 -->
+          <section class="legal-section">
+            <h2>2. 服务说明</h2>
+            <p>Mozucat 是一款媒体播放器应用，可让您使用自己的凭据和订阅连接并播放来自 IPTV 服务提供商的内容。</p>
+            <ul>
+              <li>Mozucat <strong>不</strong>提供、<strong>不</strong>托管、<strong>不</strong>存储也<strong>不</strong>分发任何媒体内容</li>
+              <li>Mozucat <strong>不</strong>作为 IPTV 服务提供商</li>
+              <li>Mozucat 仅是用于访问您现有 IPTV 服务的客户端应用</li>
+              <li>通过本应用访问的所有内容均由用户配置的第三方 IPTV 服务提供商提供</li>
+            </ul>
+          </section>
+
+          <!-- 3. 用户责任 -->
+          <section class="legal-section">
+            <h2>3. 用户责任</h2>
+            <p>作为 Mozucat 的用户，您同意：</p>
+            <ul>
+              <li>仅使用合法获得的 IPTV 服务凭据</li>
+              <li>确保您的 IPTV 服务订阅有效且合法</li>
+              <li>遵守与内容流媒体和版权相关的所有适用的地方、国家和国际法律</li>
+              <li>不将本应用用于任何非法、未经授权或被禁止的目的</li>
+              <li>不试图反汇编、反编译或对本应用进行逆向工程</li>
+              <li>不重新分发或转售本应用或其任何部分</li>
+            </ul>
+            <p>您对通过您的 IPTV 服务提供商访问的内容以及确保该访问符合适用法律负全部责任。</p>
+          </section>
+
+          <!-- 4. 知识产权 -->
+          <section class="legal-section">
+            <h2>4. 知识产权</h2>
+            <p>Mozucat 应用，包括其设计、代码、图形、徽标和用户界面，是 Mozucat 的知识产权，受适用的版权和商标法保护。</p>
+            <ul>
+              <li>您获得有限的、非排他性的、不可转让的许可，可将本应用用于个人和非商业目的</li>
+              <li>您不得复制、修改、分发或基于本应用创建衍生作品</li>
+              <li>Mozucat 名称、徽标和品牌形象是 Mozucat 的商标</li>
+            </ul>
+          </section>
+
+          <!-- 5. 内容免责声明 -->
+          <section class="legal-section">
+            <h2>5. 内容免责声明</h2>
+            <p>Mozucat 仅作为媒体播放器和客户端应用运行。我们想要明确说明：</p>
+            <ul>
+              <li>我们对您的 IPTV 服务所提供的内容没有任何控制权</li>
+              <li>我们不认可、不验证也不对通过本应用访问的任何第三方内容承担任何责任</li>
+              <li>我们对您的 IPTV 提供商内容的准确性、合法性或质量不承担责任</li>
+              <li>内容的可用性和质量完全取决于您的 IPTV 服务提供商</li>
+            </ul>
+            <p>任何与内容相关的问题应向您的 IPTV 服务提供商提出。</p>
+          </section>
+
+          <!-- 6. 责任限制 -->
+          <section class="legal-section">
+            <h2>6. 责任限制</h2>
+            <p>在适用法律允许的最大范围内：</p>
+            <ul>
+              <li>本应用按"现状"和"现有"提供，不附带任何形式的明示或暗示保证</li>
+              <li>我们不保证本应用的运行不会中断、无错误或安全</li>
+              <li>我们对您的 IPTV 提供商的流媒体质量问题、缓冲或服务中断不承担责任</li>
+              <li>我们对因您使用本应用而产生的任何间接、附带、特殊或后果性损害不承担责任</li>
+              <li>我们的总责任不会超过您为本应用支付的金额</li>
+            </ul>
+          </section>
+
+          <!-- 7. 账户与数据 -->
+          <section class="legal-section">
+            <h2>7. 账户与数据</h2>
+            <p>您负责：</p>
+            <ul>
+              <li>对您的 IPTV 服务凭据保密</li>
+              <li>使用您所配置的服务连接而发生的任何活动</li>
+              <li>确保您设备的安全，以保护本地存储的数据</li>
+            </ul>
+            <p>Mozucat 将大部分 IPTV 数据存储在您设备的本地。我们不为您的 IPTV 凭据或观看历史记录维护云账户。但是，对于 Mozucat Pro 购买，我们的支付和订阅服务商可能会保留一个假名应用标识符和您的访问权限状态。卸载本应用将删除所有本地存储的数据，包括已保存的凭据、收藏和观看历史记录。</p>
+          </section>
+
+          <!-- 8. 赔偿 -->
+          <section class="legal-section">
+            <h2>8. 赔偿</h2>
+            <p>使用 Mozucat 即表示您同意，对于因以下情形引起或与之相关的任何索赔、损害、责任、损失、费用或开支（包括合理的律师费），您将为 Mozucat 及其开发者、贡献者和关联方进行辩护、赔偿并使其免受损害：</p>
+            <ul>
+              <li>您对本应用的使用或滥用</li>
+              <li>您违反本条款</li>
+              <li>您违反任何法律、法规或第三方权利（包括知识产权和隐私权）</li>
+              <li>您通过所连接的 IPTV 服务提供商访问、播放、录制或分发的任何内容</li>
+              <li>您与您的 IPTV 服务提供商之间的任何争议</li>
+            </ul>
+            <p>Mozucat 不会选择、托管、推荐、认可、索引或控制您选择访问的 IPTV 提供商、播放列表或内容。您对您与本应用一起使用的凭据、服务、播放列表和内容的合法性负全部责任。本应用不提供任何提供商列表，也不提供任何预配置的服务。</p>
+          </section>
+
+          <!-- 9. Mozucat Pro 订阅 -->
+          <section class="legal-section">
+            <h2>9. Mozucat Pro 订阅</h2>
+            <p>Mozucat 可能会提供付费的应用内购买，以 Mozucat Pro 品牌提供高级功能的访问权限。可用的优惠可能包括：</p>
+            <ul>
+              <li><strong>Monthly：</strong>每月自动续订的订阅</li>
+              <li><strong>Annual：</strong>每年自动续订的订阅</li>
+              <li><strong>Lifetime：</strong>一次性购买，无需定期续订即可访问 Mozucat Pro，须遵守服务可用性条件以及用于购买的商店账户的条件</li>
+            </ul>
+            <p>每项优惠的参考价格、适用货币、可能的税费、确切期限以及所包含的权益，始终会在您确认订单之前显示在购买屏幕以及 App Store 或 Google Play 的支付流程中。以付款时显示的价格为准。</p>
+            <p>Monthly 和 Annual 优惠会自动续订，除非在下一个计费日期之前在您的 App Store 或 Google Play 账户的订阅设置中取消。取消将在当前周期结束时生效；对于已开始的周期，不会提供任何部分退款，除非适用的强制性法律规定或相关商店的政策另有规定。</p>
+            <p>当提供 7 天免费试用时，仅限购买屏幕上指明的符合条件的用户使用。除非根据适用商店的规则在试用结束前取消，否则试用将自动转换为按所显示价格收费的付费订阅。</p>
+            <p>所有付款、续订、账单和退款均由 Apple 或 Google 根据用于购买的商店进行处理。退款请求必须根据各自的政策向 App Store 或 Google Play 提出。除非适用法律或商店政策有所要求，否则 Lifetime 购买和已计费的订阅周期在访问权限激活后不可退款。</p>
+            <p>在适用法律允许的范围内，如果您要求立即执行付费的数字内容或服务，您承认一旦访问开始，可能适用的撤销权即可能终止。</p>
+          </section>
+
+          <!-- 10. 推送通知 -->
+          <section class="legal-section">
+            <h2>10. 推送通知</h2>
+            <p>使用本应用即表示您同意在您的设备上接收来自 Mozucat 的推送通知，特别是：</p>
+            <ul>
+              <li>与服务相关的通知（下载完成、播放事件、应用更新）</li>
+              <li>与账户相关的通知（订阅状态、安全提醒）</li>
+              <li>可选的促销通知（新功能、重要公告）</li>
+            </ul>
+            <p>您可以随时在设备的系统设置中禁用通知。某些与服务相关的通知可能是本应用正常运行所必需的，无法从本应用中禁用。</p>
+            <p>我们绝不会通过不安全的渠道发送包含敏感个人数据的通知。</p>
+          </section>
+
+          <!-- 11. 版权 -->
+          <section class="legal-section">
+            <h2>11. 版权侵权投诉和删除通知</h2>
+            <p>Mozucat 是一款媒体播放器应用。我们不托管、不存储、不分发、不传输也不索引任何音视频内容。通过本应用播放的所有内容均由用户选择和配置的 IPTV 服务提供商提供。</p>
+            <p>如果您认为通过 IPTV 提供商访问的内容侵犯了您的权利：</p>
+            <ul>
+              <li>请将您的投诉提交给托管和分发该内容的 IPTV 服务提供商。Mozucat 无法删除、屏蔽或修改第三方服务器上的内容。</li>
+              <li>如果您认为某项投诉被错误地提交给了我们，请通过 <a href="mailto:support@mozucat.com">support@mozucat.com</a> 联系我们。我们将提供合理的指引，帮助您联系到主管方。</li>
+            </ul>
+            <p>在适用法律要求的范围内，我们保留与主管机关的有效合法请求进行合作的权利。</p>
+          </section>
+
+          <!-- 12. 终止 -->
+          <section class="legal-section">
+            <h2>12. 终止</h2>
+            <p>我们保留以下权利：</p>
+            <ul>
+              <li>随时中止或修改本应用，恕不另行通知</li>
+              <li>随时以任何理由拒绝向任何人提供服务</li>
+            </ul>
+            <p>您可以随时通过从设备中卸载本应用来终止对本应用的使用。终止后，所有本地存储的数据将被删除。</p>
+          </section>
+
+          <!-- 13. 适用法律 -->
+          <section class="legal-section">
+            <h2>13. 适用法律</h2>
+            <p>本条款受适用法律管辖并据其解释，不考虑法律冲突原则。因本条款或您使用本应用而产生的任何争议，将通过适用司法管辖区内的适当法律途径解决。</p>
+          </section>
+
+          <!-- 14. 条款变更 -->
+          <section class="legal-section">
+            <h2>14. 本条款的变更</h2>
+            <p>我们保留随时修改本条款的权利。修改将在应用中以更新的"最后更新"日期反映出来。在任何修改后继续使用本应用即表示接受修订后的条款。</p>
+            <p>我们建议您定期查阅本条款，以了解任何更新。</p>
+          </section>
+
+          <!-- 15. 联系我们 -->
+          <section class="legal-section">
+            <h2>15. 联系我们</h2>
+            <p>如果您对本使用条款有任何疑问，请通过以下方式联系我们：</p>
+            <p><a href="mailto:support@mozucat.com">support@mozucat.com</a></p>
+          </section>
+
+        </article>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/">
+            <img src="assets/mozucat-cat.png" alt="" />
+            <span class="word">Mozucat</span>
+          </a>
+          <p class="footer-tag">精致的 IPTV 体验。</p>
+        </div>
+        <div class="footer-col">
+          <h4>应用</h4>
+          <ul>
+            <li><a href="#">App Store</a></li>
+            <li><a href="#">Google Play</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>法律</h4>
+          <ul>
+            <li><a href="terms-zh.html" aria-current="page">使用条款</a></li>
+            <li><a href="privacy-policy-zh.html">隐私</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>联系</h4>
+          <ul>
+            <li><a href="mailto:contact@mozucat.com">contact@mozucat.com</a></li>
+            <li><a href="mailto:support@mozucat.com">support@mozucat.com</a></li>
+            <li><a href="mailto:ads@mozucat.com">ads@mozucat.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Mozucat。保留所有权利。
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
