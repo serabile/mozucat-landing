@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#040712" />
+
+  <title>Support &amp; Aide — Mozucat</title>
+  <meta name="description" content="Besoin d'aide avec Mozucat ? FAQ, contact support et ressources pour l'application IPTV premium sur iPhone, Android et TV." />
+  <link rel="canonical" href="https://mozucat.com/support" />
+  <link rel="icon" type="image/png" href="assets/mozucat-cat.png" />
+  <link rel="apple-touch-icon" href="assets/mozucat-cat.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & ROOT
+       ============================================================ */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+    html{scroll-behavior:smooth}
+    html,body{
+      background:#040712;color:#fff;
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+      min-height:100vh;overflow-x:hidden;
+      -webkit-text-size-adjust:100%;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+    .material-symbols-outlined{
+      font-family:"Material Symbols Outlined";
+      font-weight:normal;font-style:normal;line-height:1;
+      letter-spacing:normal;text-transform:none;display:inline-block;
+      white-space:nowrap;word-wrap:normal;direction:ltr;
+      -webkit-font-feature-settings:"liga";font-feature-settings:"liga";
+      -webkit-font-smoothing:antialiased;
+      font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 24;
+    }
+
+    /* ============================================================
+       GLOBAL BACKGROUND
+       ============================================================ */
+    body{
+      background:
+        radial-gradient(900px 700px at 50% -100px, rgba(90,169,255,.22), transparent 60%),
+        radial-gradient(800px 800px at 85% 35%, rgba(255,48,87,.10), transparent 65%),
+        radial-gradient(700px 700px at 10% 55%, rgba(95,226,191,.10), transparent 65%),
+        linear-gradient(180deg,#0c1736 0%,#070a1a 38%,#040712 100%);
+      background-attachment:fixed;
+    }
+    body::before{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+      background-size:60px 60px;
+      mask-image:radial-gradient(60% 50% at 50% 30%,#000 40%,transparent 80%);
+      -webkit-mask-image:radial-gradient(60% 50% at 50% 30%,#000 40%,transparent 80%);
+    }
+    body::after{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+      background:
+        radial-gradient(2px 2px at 14% 18%, rgba(255,255,255,.5), transparent 60%),
+        radial-gradient(2px 2px at 78% 12%, rgba(255,255,255,.6), transparent 60%),
+        radial-gradient(2px 2px at 22% 82%, rgba(255,255,255,.5), transparent 60%),
+        radial-gradient(2px 2px at 88% 64%, rgba(255,255,255,.55), transparent 60%),
+        radial-gradient(2px 2px at 50% 92%, rgba(255,255,255,.4), transparent 60%);
+    }
+    main, header, footer{position:relative;z-index:1}
+
+    /* ============================================================
+       UTILITIES
+       ============================================================ */
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+
+    /* ============================================================
+       HEADER
+       ============================================================ */
+    .site-header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      background:rgba(7,10,26,.65);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .header-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 24px;max-width:1200px;margin:0 auto;gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;flex:none}
+    .brand img{height:32px;width:auto;filter:drop-shadow(0 4px 12px rgba(90,169,255,.4))}
+    .brand .word{
+      font-size:22px;font-weight:900;letter-spacing:-.03em;
+      background:linear-gradient(180deg,#fff 0%,#b9c8ff 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .nav{display:flex;align-items:center;gap:28px}
+    .nav a{font-size:14px;font-weight:500;color:#b6c0db;transition:color .2s ease}
+    .nav a:hover{color:#fff}
+    .cta-header{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:9px 16px;border-radius:999px;
+      background:linear-gradient(135deg,#5aa9ff 0%,#5fe2bf 100%);
+      color:#040712;font-weight:700;font-size:14px;letter-spacing:-.01em;
+      transition:transform .2s ease, box-shadow .2s ease;
+      box-shadow:0 8px 24px -10px rgba(90,169,255,.6);
+    }
+    .cta-header:hover{transform:translateY(-1px);box-shadow:0 14px 32px -10px rgba(90,169,255,.7)}
+    .cta-header .material-symbols-outlined{font-size:18px}
+    .lang-switch{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;letter-spacing:.06em;flex:none}
+    .lang-switch a{color:#9aa3bf;transition:color .2s ease}
+    .lang-switch a:hover{color:#fff}
+    .lang-switch .lang-active{color:#fff}
+    .lang-switch .lang-sep{color:#9aa3bf;font-weight:400}
+
+    @media (max-width:768px){
+      .nav{display:none}
+      .header-inner{padding:12px 18px}
+      .brand .word{font-size:18px}
+      .brand img{height:26px}
+      .cta-header{padding:8px 14px;font-size:13px}
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .site-footer{
+      padding:64px 0 32px;
+      border-top:1px solid rgba(255,255,255,.06);
+      background:rgba(4,7,18,.6);
+    }
+    .footer-grid{
+      display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;
+      margin-bottom:40px;
+    }
+    .footer-brand .brand{margin-bottom:14px}
+    .footer-brand .brand .word{font-size:24px}
+    .footer-tag{color:#b6c0db;font-size:14px;line-height:1.55;max-width:280px}
+    .footer-col h4{
+      font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+      color:#9ec0ff;font-weight:700;margin-bottom:16px;
+    }
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .footer-col a{font-size:14px;color:#b6c0db;transition:color .2s ease}
+    .footer-col a:hover{color:#fff}
+    .footer-bottom{
+      padding-top:24px;border-top:1px solid rgba(255,255,255,.06);
+      font-size:13px;color:#9aa3bf;text-align:center;
+    }
+    @media (max-width:900px){
+      .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+      .footer-brand{grid-column:1 / -1}
+    }
+    @media (max-width:560px){.footer-grid{grid-template-columns:1fr}}
+
+    /* ============================================================
+       SUPPORT / LEGAL PAGE
+       ============================================================ */
+    .legal-hero{
+      padding:72px 0 44px;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .back-link{
+      display:inline-flex;align-items:center;gap:6px;
+      font-size:14px;color:#9ec0ff;font-weight:500;
+      margin-bottom:28px;
+      transition:color .2s ease;
+    }
+    .back-link:hover{color:#fff}
+    .back-link .material-symbols-outlined{
+      font-size:18px;
+      font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;
+    }
+    .legal-hero h1{
+      font-size:clamp(28px,4vw,48px);line-height:1.08;letter-spacing:-.03em;
+      font-weight:800;margin-bottom:12px;
+      background:linear-gradient(180deg,#fff 0%,#b9c8ff 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .legal-hero .meta{font-size:15px;color:#b6c0db;max-width:560px;margin:0 auto;line-height:1.6}
+
+    .legal-body{padding:60px 0 96px}
+    .legal-article{max-width:760px;margin:0 auto}
+
+    /* ---- Contact cards ---- */
+    .support-cards{
+      display:grid;grid-template-columns:1fr 1fr;gap:18px;
+      margin-bottom:56px;
+    }
+    .support-card{
+      display:flex;flex-direction:column;gap:8px;
+      padding:26px 24px;border-radius:18px;
+      background:rgba(255,255,255,.035);
+      border:1px solid rgba(255,255,255,.08);
+      transition:transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .support-card:hover{
+      transform:translateY(-2px);
+      border-color:rgba(90,169,255,.4);
+      background:rgba(90,169,255,.06);
+    }
+    .support-card .icon{
+      width:44px;height:44px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,rgba(90,169,255,.25),rgba(95,226,191,.18));
+      color:#bcd6ff;margin-bottom:6px;
+    }
+    .support-card .icon .material-symbols-outlined{font-size:24px}
+    .support-card h3{font-size:16px;font-weight:700;color:#fff}
+    .support-card p{font-size:14px;line-height:1.55;color:#9aa3bf}
+    .support-card a.card-link{
+      color:#5aa9ff;font-weight:600;font-size:14px;
+      display:inline-flex;align-items:center;gap:4px;margin-top:2px;
+    }
+    .support-card a.card-link:hover{color:#fff}
+    .support-card a.card-link .material-symbols-outlined{
+      font-size:16px;
+      font-variation-settings:'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 20;
+    }
+    @media (max-width:560px){.support-cards{grid-template-columns:1fr}}
+
+    /* ---- Section heading ---- */
+    .support-section-title{
+      font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+      color:#9ec0ff;margin-bottom:24px;text-align:center;
+    }
+
+    /* ---- FAQ ---- */
+    .faq-item{
+      border:1px solid rgba(255,255,255,.07);
+      border-radius:14px;
+      background:rgba(255,255,255,.025);
+      margin-bottom:14px;
+      overflow:hidden;
+    }
+    .faq-item summary{
+      list-style:none;cursor:pointer;
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:20px 22px;
+      font-size:16px;font-weight:600;color:#fff;
+    }
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary .chev{
+      flex:none;color:#9ec0ff;transition:transform .25s ease;
+      font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+    }
+    .faq-item[open] summary .chev{transform:rotate(180deg)}
+    .faq-item .faq-answer{padding:0 22px 22px}
+    .faq-item .faq-answer p{
+      font-size:15px;line-height:1.75;color:#b6c0db;margin-bottom:12px;
+    }
+    .faq-item .faq-answer p:last-child{margin-bottom:0}
+    .faq-item .faq-answer a{
+      color:#5aa9ff;text-decoration:underline;text-underline-offset:3px;transition:color .2s;
+    }
+    .faq-item .faq-answer a:hover{color:#fff}
+    .faq-item .faq-answer ul{
+      list-style:none;padding:0;margin:0 0 12px;display:flex;flex-direction:column;gap:10px;
+    }
+    .faq-item .faq-answer ul:last-child{margin-bottom:0}
+    .faq-item .faq-answer ul li{
+      font-size:15px;line-height:1.7;color:#b6c0db;padding-left:22px;position:relative;
+    }
+    .faq-item .faq-answer ul li::before{content:"•";position:absolute;left:0;color:#5aa9ff;font-weight:700}
+
+    /* ---- Closing note ---- */
+    .support-note{
+      margin-top:48px;padding:28px 26px;border-radius:18px;text-align:center;
+      background:rgba(90,169,255,.06);border:1px solid rgba(90,169,255,.18);
+    }
+    .support-note p{font-size:15px;line-height:1.7;color:#b6c0db}
+    .support-note a{color:#5aa9ff;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+    .support-note a:hover{color:#fff}
+
+    @media (max-width:768px){
+      .legal-hero{padding:56px 0 32px}
+      .legal-body{padding:40px 0 72px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Mozucat — accueil">
+        <img src="assets/mozucat-cat.png" alt="" />
+        <span class="word">Mozucat</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="/#features">Fonctionnalités</a>
+        <a href="/#how">Comment ça marche</a>
+        <a href="/#screens">Captures</a>
+        <a href="/#ads">Annonceurs</a>
+      </nav>
+      <div class="lang-switch" aria-label="Langue">
+        <span class="lang-active">FR</span>
+        <span class="lang-sep">·</span>
+        <a href="support-en.html">EN</a>
+      </div>
+      <a class="cta-header" href="/#download">
+        <span class="material-symbols-outlined">download</span>
+        Télécharger
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================ HERO ============================ -->
+    <div class="legal-hero">
+      <div class="container">
+        <a class="back-link" href="/">
+          <span class="material-symbols-outlined">arrow_back</span>
+          Retour au site
+        </a>
+        <h1>Support &amp; Aide</h1>
+        <p class="meta">Une question, un souci avec l'application ou votre abonnement&nbsp;? Trouvez une réponse rapide ci-dessous, ou contactez-nous directement — nous répondons en général sous 24 à 48&nbsp;h.</p>
+      </div>
+    </div>
+
+    <!-- ============================ CONTENT ============================ -->
+    <div class="legal-body">
+      <div class="container">
+        <article class="legal-article">
+
+          <!-- ---- Contact cards ---- -->
+          <div class="support-cards">
+            <div class="support-card">
+              <div class="icon"><span class="material-symbols-outlined">mail</span></div>
+              <h3>Contacter le support</h3>
+              <p>Pour toute question technique, bug ou demande liée à votre compte.</p>
+              <a class="card-link" href="mailto:support@mozucat.com">
+                support@mozucat.com
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </a>
+            </div>
+            <div class="support-card">
+              <div class="icon"><span class="material-symbols-outlined">workspace_premium</span></div>
+              <h3>Abonnement Mozucat Pro</h3>
+              <p>Facturation, renouvellement et remboursements sont gérés par l'App Store.</p>
+              <a class="card-link" href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">
+                Gérer mon abonnement
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- ---- FAQ ---- -->
+          <h2 class="support-section-title">Questions fréquentes</h2>
+
+          <details class="faq-item">
+            <summary>
+              Qu'est-ce que Mozucat&nbsp;?
+              <span class="material-symbols-outlined chev">expand_more</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Mozucat est un <strong>lecteur multimédia (client IPTV)</strong> qui vous permet de vous connecter et de diffuser du contenu depuis votre propre fournisseur de service IPTV, à l'aide de vos identifiants.</p>
+              <p>Mozucat ne fournit, n'héberge ni ne distribue aucun contenu&nbsp;: c'est uniquement une application pour accéder à un service auquel vous êtes déjà abonné.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Comment ajouter ma source / mes identifiants IPTV&nbsp;?
+              <span class="material-symbols-outlined chev">expand_more</span>
+            </summary>
+            <div class="faq-answer">
+              <p>À l'ouverture de l'application, ajoutez votre source en saisissant les informations fournies par votre fournisseur IPTV&nbsp;:</p>
+              <ul>
+                <li>Une <strong>URL Xtream Codes</strong> avec nom d'utilisateur et mot de passe, ou</li>
+                <li>Une <strong>URL de playlist M3U</strong>.</li>
+              </ul>
+              <p>Vos identifiants sont stockés localement sur votre appareil. Si la connexion échoue, vérifiez l'URL, vos identifiants et la validité de votre abonnement auprès de votre fournisseur.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Le flux ne se lance pas ou « buffer » sans arrêt
+              <span class="material-symbols-outlined chev">expand_more</span>
+            </summary>
+            <div class="faq-answer">
+              <p>La qualité de lecture dépend de votre connexion et surtout de votre fournisseur IPTV. Essayez de&nbsp;:</p>
+              <ul>
+                <li>Vérifier votre connexion Internet (Wi-Fi ou données mobiles).</li>
+                <li>Redémarrer l'application, puis l'appareil.</li>
+                <li>Tester une autre chaîne ou un autre contenu&nbsp;: si tout est lent, le problème vient probablement du serveur de votre fournisseur.</li>
+              </ul>
+              <p>Si seul un contenu est concerné, contactez votre fournisseur IPTV — nous n'avons aucun contrôle sur ses serveurs.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Comment gérer ou annuler mon abonnement Mozucat Pro&nbsp;?
+              <span class="material-symbols-outlined chev">expand_more</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Les abonnements Mozucat Pro sont gérés via votre compte App Store ou Google Play. Pour annuler ou modifier&nbsp;:</p>
+              <ul>
+                <li><strong>iPhone / iPad&nbsp;:</strong> Réglages → [votre nom] → Abonnements → Mozucat.</li>
+                <li><strong>Android&nbsp;:</strong> Google Play → Profil → Paiements et abonnements → Abonnements.</li>
+              </ul>
+              <p>L'annulation prend effet à la fin de la période en cours. Les demandes de <strong>remboursement</strong> se font directement auprès de l'<a href="https://support.apple.com/billing" target="_blank" rel="noopener">App Store</a> ou de Google Play, selon leurs politiques.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Mes données sont-elles en sécurité&nbsp;?
+              <span class="material-symbols-outlined chev">expand_more</span>
+            </summary>
+            <div class="faq-answer">
+              <p>La plupart de vos données (identifiants IPTV, favoris, historique) sont stockées <strong>localement sur votre appareil</strong>. La désinstallation de l'application les supprime.</p>
+              <p>Pour en savoir plus, consultez notre <a href="privacy-policy.html">Politique de confidentialité</a>.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Sur quels appareils Mozucat fonctionne-t-il&nbsp;?
+              <span class="material-symbols-outlined chev">expand_more</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Mozucat est disponible sur iPhone et iPad, sur Android (téléphone et tablette) ainsi que sur les téléviseurs compatibles. Téléchargez la dernière version depuis la <a href="/#download">page de téléchargement</a>.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Signaler un bug ou suggérer une fonctionnalité
+              <span class="material-symbols-outlined chev">expand_more</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Vos retours nous aident à améliorer Mozucat. Écrivez-nous à <a href="mailto:support@mozucat.com">support@mozucat.com</a> en précisant&nbsp;:</p>
+              <ul>
+                <li>Le modèle de votre appareil et la version du système.</li>
+                <li>La version de l'application.</li>
+                <li>Une description du problème (et, si possible, une capture d'écran).</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- ---- Closing note ---- -->
+          <div class="support-note">
+            <p>Vous n'avez pas trouvé de réponse&nbsp;? Écrivez-nous à <a href="mailto:support@mozucat.com">support@mozucat.com</a>.<br />
+            Consultez aussi nos <a href="terms.html">Conditions d'utilisation</a> et notre <a href="privacy-policy.html">Politique de confidentialité</a>.</p>
+          </div>
+
+        </article>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/">
+            <img src="assets/mozucat-cat.png" alt="" />
+            <span class="word">Mozucat</span>
+          </a>
+          <p class="footer-tag">L'expérience IPTV, soignée.</p>
+        </div>
+        <div class="footer-col">
+          <h4>App</h4>
+          <ul>
+            <li><a href="#">App Store</a></li>
+            <li><a href="#">Google Play</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="terms.html">Mentions légales</a></li>
+            <li><a href="privacy-policy.html">Confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="support.html" aria-current="page">Support</a></li>
+            <li><a href="mailto:contact@mozucat.com">contact@mozucat.com</a></li>
+            <li><a href="mailto:support@mozucat.com">support@mozucat.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Mozucat. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
